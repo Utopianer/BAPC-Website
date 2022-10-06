@@ -1,0 +1,392 @@
+@font-face {
+  font-family: "AVENGEANCE-MIGHTIEST-AVENGER";
+  src: url("../fonts/AVENGEANCE-MIGHTIEST-AVENGER.ttf");
+}
+
+body {
+  font-size: 1em;
+  font-family: "AVENGEANCE-MIGHTIEST-AVENGER";
+  background-image: url("../img/bg.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: top;
+}
+
+/* Navbar */
+.navbar .nav-link {
+  color: white;
+  transition: 200ms all ease-in-out;
+  font-size: 0.9em;
+}
+.navbar .nav-item.odd {
+  margin-left: 8em;
+}
+.navbar .nav-item.mintItem {
+  margin-left: 5.5em;
+}
+.navbar .nav-link:hover {
+  opacity: 0.7;
+}
+.navbar .nav-link.logo {
+  padding: 1.4em 4em !important;
+  margin-left: 4.5em;
+}
+.navbar .navbar-nav {
+  align-items: center;
+}
+.flagDropdown.dropdown {
+  background: white;
+  padding: 0;
+  height: 22px;
+  border-radius: 3px;
+  margin-left: 1em;
+}
+.flagDropdown .dropdown-toggle {
+  padding: 2px !important;
+}
+.flagDropdown .dropdown-toggle img {
+  vertical-align: text-top;
+}
+.flagDropdown .dropdown-toggle::after {
+  color: black;
+  transition: 200ms all ease-in-out;
+}
+.flagDropdown .dropdown-toggle.show::after {
+  transform: rotate(180deg);
+}
+.flagDropdown .dropdown-item {
+  padding: 0 0.1em;
+}
+.flagDropdown .dropdown-item:hover {
+  background-color: transparent;
+}
+.flagDropdown .dropdown-item img {
+  transition: 200ms all ease-in-out;
+}
+.flagDropdown .dropdown-item:hover img {
+  transform: scale(1.4);
+}
+.flagDropdown .dropdown-menu {
+  background-color: transparent;
+  padding: 0.2rem 0;
+  border: none;
+  display: block;
+  opacity: -1;
+  transition: 500ms all ease-in-out;
+}
+.flagDropdown .dropdown-menu.show {
+  opacity: 1;
+}
+
+/* Infinity Section */
+.infinitySection {
+  padding: 4em 0;
+}
+.mainHeading {
+  color: white;
+  font-size: 2.5em;
+  margin-bottom: 0.4em;
+  text-transform: capitalize;
+}
+.mainText {
+  font-family: "Inter";
+  font-weight: 400;
+  font-size: 1.1em;
+  color: white;
+}
+.mainText span {
+  font-weight: 700;
+}
+.mainBtn {
+  display: inline-block;
+  padding: 0.6em 2em;
+  text-align: center;
+  font-size: 1.2em;
+  transition: 200ms all ease-in-out;
+  color: black;
+  background-color: #f7c36f;
+  border-radius: 0.2em;
+  text-decoration: none;
+  margin-top: 1.5em;
+}
+.mainBtn:hover {
+  color: black;
+  background-color: white;
+}
+.mainBtn.mobileBtn {
+  display: none;
+}
+.infinitySection .row {
+  align-items: center;
+}
+.infinitySection .pizzaImg {
+  width: 100%;
+}
+
+/* Copy Right Text */
+.copyRightText {
+  font-family: "Inter";
+  font-weight: 400;
+  color: white;
+  font-size: 0.8em;
+  padding: 1em 0;
+  text-align: center;
+}
+
+/* Hide Menu */
+.hideMenu {
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  top: 0;
+  height: 60px;
+  width: 100%;
+  transition: 300ms all ease-in-out;
+  display: none;
+  z-index: 1000;
+  padding: 0.8em 1.5em;
+}
+.hamburger .line {
+  width: 21px;
+  height: 3px;
+  background-color: white;
+  display: block;
+  margin: 4px auto;
+  border-radius: 30px;
+  transition: all 0.3s ease-in-out;
+}
+#hideMenuIcon.is-active .line:nth-child(2) {
+  opacity: 0;
+}
+#hideMenuIcon.is-active .line:nth-child(1) {
+  transform: translateY(13px) rotate(45deg);
+  width: 22px;
+}
+#hideMenuIcon.is-active .line:nth-child(3) {
+  transform: translateY(1px) rotate(-45deg);
+  width: 22px;
+}
+.hideMenu.show {
+  height: 300px;
+  overflow: unset;
+  background-color: black;
+  margin: 0;
+  top: 0;
+  border-radius: 0;
+}
+.hideMenu.show #hideMenuIcon.is-active .line:nth-child(1) {
+  width: 28px;
+}
+.hideMenu.show #hideMenuIcon.is-active .line:nth-child(3) {
+  width: 28px;
+}
+.hideMenu.show .hamburger .line {
+  margin: 3px auto;
+}
+.hideMenu .hideMenuHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.hideMenu .menuBrand {
+  display: inline-block;
+  text-decoration: none;
+}
+.hideMenu .hideMenuHeader .fa-xmark {
+  color: white;
+  font-size: 0.9em;
+}
+.hideMenu .hideMenuBody {
+  margin: 2em 0;
+  opacity: -1;
+}
+.hideMenu.show .hideMenuBody {
+  opacity: 1;
+}
+.hideMenu .hideMenuBody {
+  text-align: center;
+}
+.hideMenu .hideMenuBody .hideMenuLink {
+  color: white;
+  font-size: 0.9em;
+  display: block;
+  text-decoration: none;
+  margin-bottom: 2em;
+  transition: 200ms all ease-in-out;
+}
+.hideMenu .hideMenuBody .hideMenuLink:hover {
+  opacity: 0.7;
+}
+.hideMenu a {
+  text-decoration: none;
+}
+
+/* VIP Pass Page */
+.heroSection {
+  background-image: url("../img/bg.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: top;
+}
+.imgContainer {
+  position: relative;
+}
+.imgContainer .socialLinks a {
+  display: inline-block;
+  text-decoration: none;
+  transition: 200ms all ease-in-out;
+}
+.imgContainer .socialLinks {
+  position: absolute;
+  right: 15px;
+  bottom: 15px;
+}
+.imgContainer .socialLinks a:hover {
+  transform: scale(1.1);
+}
+
+/* Get Section */
+.getSection {
+  padding: 2em 0;
+  text-align: center;
+  background-color: #000000;
+}
+.getSection .headerContents .mainHeading {
+  font-size: 3.1em;
+}
+.getSection .getCard .mainHeading {
+  margin-bottom: 0.6em;
+  line-height: 1;
+}
+.getSection .getCard {
+  position: relative;
+}
+.getSection .getCard .lgArrowImg {
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+.getSection .getCard .getCardImg {
+  width: 97%;
+  margin-bottom: 1.2em;
+}
+.getSection .firstCol {
+  margin-top: 13em;
+}
+.getSection .getCard .mainHeading span {
+  font-size: 0.6em;
+}
+.getSection .getCard .mainHeading div {
+  font-family: "Inter";
+  font-weight: 300;
+  font-size: 0.5em;
+  color: white;
+}
+
+/* Home */
+body.home {
+  background-image: url("../img/home-bg.png");
+}
+
+/* Home Section */
+.homeSection {
+  text-align: center;
+  min-height: 80vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+}
+.homeSection .multiButton {
+  margin: 10em 0;
+}
+.homeSection .multiButton .mainBtn {
+  background-color: #000000;
+  color: #f7c36f;
+  margin: 0 0.4em;
+}
+.homeSection .multiButton .mainBtn:hover {
+  background-color: white;
+  color: black;
+}
+.homeContents .mainHeading {
+  text-shadow: 0px 4px 10px #000000;
+}
+.homeSection .homeSocialLink {
+  text-decoration: none;
+  display: inline-block;
+  transition: 200ms all ease-in-out;
+}
+.homeSection .homeSocialLink:hover {
+  transform: translateY(-8px);
+}
+/* Media Query */
+@media (max-width: 992px) {
+  .navbar {
+    display: none;
+  }
+  .infinitySection {
+    text-align: center;
+    padding: 9em 0 4em 0;
+  }
+  .infinitySection .row {
+    flex-wrap: wrap-reverse;
+  }
+  .mainBtn.desktopBtn {
+    display: none;
+  }
+  .mainBtn.mobileBtn {
+    display: inline-block;
+  }
+  .heroSection .navbar {
+    display: none;
+  }
+  .hideMenu {
+    display: block;
+  }
+  .hideMenu .flagDropdown.dropdown {
+    margin-left: 0;
+  }
+  .mainText br {
+    display: none !important;
+  }
+  .getSection .getCard .mainHeading {
+    font-size: 1em;
+  }
+  .getSection .getCard .mainText {
+    font-size: 0.8em;
+  }
+  .getSection .getCard .lgArrowImg {
+    width: 55%;
+    right: -15px;
+    top: 7px;
+  }
+  .getSection .firstCol {
+    margin-top: 4em;
+  }
+  .homeSection {
+    min-height: 95vh;
+  }
+  .homeSection .multiButton {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .homeSection .multiButton .mainBtn {
+    font-size: 1em;
+    width: 100%;
+    padding: 0.6em;
+    margin: 0 0.7em;
+  }
+  .hideMenu .menuBrand img {
+    height: 50px;
+  }
+  .getSection .col-lg-6.col-6.firstCol {
+    padding-right: 0;
+  }
+  .homeSection .multiButton {
+    margin: 5em 0;
+  }
+}
