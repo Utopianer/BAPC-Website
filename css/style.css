@@ -18,11 +18,14 @@ body {
   transition: 200ms all ease-in-out;
   font-size: 0.9em;
 }
+.navbar .nav-link.active {
+  border-bottom: 1px solid white;
+}
 .navbar .nav-item.odd {
   margin-left: 8em;
 }
 .navbar .nav-item.mintItem {
-  margin-left: 5.5em;
+  margin-left: 7em;
 }
 .navbar .nav-link:hover {
   opacity: 0.7;
@@ -213,8 +216,12 @@ body {
   font-size: 0.9em;
   display: block;
   text-decoration: none;
-  margin-bottom: 2em;
+  margin-bottom: 1.5em;
   transition: 200ms all ease-in-out;
+  padding-bottom: 0.8em;
+}
+.hideMenu .hideMenuBody .hideMenuLink.active {
+  border-bottom: 1px solid white;
 }
 .hideMenu .hideMenuBody .hideMenuLink:hover {
   opacity: 0.7;
@@ -259,9 +266,23 @@ body {
 .getSection .getCard .mainHeading {
   margin-bottom: 0.6em;
   line-height: 1;
+  transition: 200ms all ease-in-out;
+}
+.getSection .getCard .mainHeadin .mainText {
+  transition: 200ms all ease-in-out;
 }
 .getSection .getCard {
   position: relative;
+  display: inline-block;
+  text-decoration: none;
+}
+.getSection .getCard:hover .getCardImg {
+  transform: scale(0.98);
+}
+.getSection .getCard:hover .mainHeading,
+.getSection .getCard:hover .mainText,
+.getSection .getCard:hover .mainHeading div {
+  color: #f7c36f;
 }
 .getSection .getCard .lgArrowImg {
   position: absolute;
@@ -271,6 +292,7 @@ body {
 .getSection .getCard .getCardImg {
   width: 97%;
   margin-bottom: 1.2em;
+  transition: 200ms all ease-in-out;
 }
 .getSection .firstCol {
   margin-top: 13em;
