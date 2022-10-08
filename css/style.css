@@ -115,7 +115,7 @@ body {
 }
 .mainBtn {
   display: inline-block;
-  padding: 0.6em 2em;
+  padding: 0.9em 0.5em;
   text-align: center;
   font-size: 1.2em;
   transition: 200ms all ease-in-out;
@@ -125,6 +125,9 @@ body {
   text-decoration: none;
   margin-top: 1.5em;
   font-weight: 600;
+  width: 100%;
+  line-height: 0.9;
+  max-width: 200px;
 }
 .mainBtn:hover {
   color: black;
@@ -423,7 +426,7 @@ body.infinityPage {
   .homeSection .multiButton .mainBtn {
     font-size: 1em;
     width: 100%;
-    padding: 0.6em;
+    padding: 0.9em 0.5em;
     margin: 0 0.7em;
   }
   .hideMenu .menuBrand img {
