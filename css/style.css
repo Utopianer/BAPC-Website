@@ -5,7 +5,8 @@
 
 body {
   font-size: 1em;
-  font-family: "AVENGEANCE-MIGHTIEST-AVENGER";
+  /* font-family: "AVENGEANCE-MIGHTIEST-AVENGER"; */
+  font-family: "Inter";
   background-image: url("../img/bg.png");
   background-repeat: no-repeat;
   background-size: cover;
@@ -17,6 +18,7 @@ body {
   color: white;
   transition: 200ms all ease-in-out;
   font-size: 0.9em;
+  font-weight: 600;
 }
 .navbar .nav-link.active {
   border-bottom: 1px solid white;
@@ -73,12 +75,7 @@ body {
   background-color: transparent;
   padding: 0.2rem 0;
   border: none;
-  display: block;
-  opacity: -1;
   transition: 500ms all ease-in-out;
-}
-.flagDropdown .dropdown-menu.show {
-  opacity: 1;
 }
 
 /* Infinity Section */
@@ -90,6 +87,17 @@ body {
   font-size: 2.5em;
   margin-bottom: 0.4em;
   text-transform: capitalize;
+  font-weight: 800;
+}
+.infinitySection .imageLink {
+  display: inline-block;
+  text-decoration: none;
+  transition: 200ms all ease-in-out;
+  width: 100%;
+}
+.infinitySection .imageLink:hover {
+  transform: scale(0.98);
+  box-shadow: 0 0 30px white;
 }
 .mainText {
   font-family: "Inter";
@@ -111,6 +119,7 @@ body {
   border-radius: 0.2em;
   text-decoration: none;
   margin-top: 1.5em;
+  font-weight: 600;
 }
 .mainBtn:hover {
   color: black;
@@ -174,7 +183,7 @@ body {
 .hideMenu.show {
   height: 300px;
   overflow: unset;
-  background-color: black;
+  background-color: black !important;
   margin: 0;
   top: 0;
   border-radius: 0;
@@ -184,6 +193,10 @@ body {
 }
 .hideMenu.show #hideMenuIcon.is-active .line:nth-child(3) {
   width: 28px;
+}
+.hideMenu .socialIcons a {
+  display: inline-block;
+  text-decoration: none;
 }
 .hideMenu.show .hamburger .line {
   margin: 3px auto;
@@ -310,6 +323,10 @@ body {
 /* Home */
 body.home {
   background-image: url("../img/home-bg.png");
+  min-height: 100vh;
+}
+body.infinityPage {
+  min-height: 100vh;
 }
 
 /* Home Section */
