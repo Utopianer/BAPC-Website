@@ -3,6 +3,10 @@
   src: url("../fonts/AVENGEANCE-MIGHTIEST-AVENGER.ttf");
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   font-size: 1em;
   /* font-family: "AVENGEANCE-MIGHTIEST-AVENGER"; */
@@ -285,9 +289,11 @@ body {
   transition: 200ms all ease-in-out;
 }
 .getSection .getCard {
-  position: relative;
   display: inline-block;
   text-decoration: none;
+}
+.getSection .arrowCard {
+  position: relative;
 }
 .getSection .getCard:hover .getCardImg {
   transform: scale(0.98);
@@ -297,7 +303,7 @@ body {
 .getSection .getCard:hover .mainHeading div {
   color: #f7c36f;
 }
-.getSection .getCard .lgArrowImg {
+.getSection .arrowCard .lgArrowImg {
   position: absolute;
   right: 0;
   top: 0;
@@ -397,7 +403,7 @@ body.infinityPage {
   .getSection .getCard .mainText {
     font-size: 0.8em;
   }
-  .getSection .getCard .lgArrowImg {
+  .getSection .arrowCard .lgArrowImg {
     width: 55%;
     right: -15px;
     top: 7px;
