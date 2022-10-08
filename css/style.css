@@ -58,6 +58,7 @@ body {
 }
 .flagDropdown .dropdown-toggle::after {
   color: black;
+  vertical-align: 0.355em;
   transition: 200ms all ease-in-out;
 }
 .flagDropdown .dropdown-toggle.show::after {
@@ -433,5 +434,11 @@ body.infinityPage {
   }
   .homeSection .multiButton {
     margin: 5em 0;
+  }
+  .flagDropdown.dropdown {
+    height: 20px;
+  }
+  .flagDropdown .dropdown-toggle img {
+    vertical-align: baseline;
   }
 }
