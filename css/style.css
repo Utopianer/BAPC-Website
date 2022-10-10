@@ -39,6 +39,9 @@ body {
 .navbar .nav-link.logo {
   padding: 1.4em 4em !important;
 }
+.navbar .logo.homeLogo {
+  margin-left: 7em;
+}
 .navbar .navbar-nav {
   align-items: center;
 }
@@ -366,6 +369,10 @@ body.infinityPage {
   text-decoration: none;
   display: inline-block;
   transition: 200ms all ease-in-out;
+}
+.homeSection .homeSocialLink.odd {
+  margin-right: 0.2em;
+  margin-left: 0.3em;
 }
 .homeSection .homeSocialLink:hover {
   transform: translateY(-8px);
