@@ -28,17 +28,16 @@ body {
   border-bottom: 1px solid white;
 }
 .navbar .nav-item.odd {
-  margin-left: 8em;
+  margin-left: 14em;
 }
 .navbar .nav-item.mintItem {
-  margin-left: 7em;
+  margin-left: 14em;
 }
 .navbar .nav-link:hover {
   opacity: 0.7;
 }
 .navbar .nav-link.logo {
   padding: 1.4em 4em !important;
-  margin-left: 4.5em;
 }
 .navbar .navbar-nav {
   align-items: center;
@@ -235,7 +234,7 @@ body {
 .hideMenu .hideMenuBody .hideMenuLink {
   color: white;
   font-size: 0.9em;
-  display: block;
+  display: inline-block;
   text-decoration: none;
   margin-bottom: 1.5em;
   transition: 200ms all ease-in-out;
@@ -430,7 +429,7 @@ body.infinityPage {
     margin: 0 0.7em;
   }
   .hideMenu .menuBrand img {
-    height: 50px;
+    height: 45px;
   }
   .getSection .col-lg-6.col-6.firstCol {
     padding-right: 0;
