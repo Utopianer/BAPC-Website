@@ -8,12 +8,24 @@ function menuBtnHandleClick() {
   document.getElementById("hideMenuIcon").classList.toggle("is-active");
 }
 
+// Scroll for Mobile
 $(window).scroll(function () {
   var currentPosition = window.scrollY;
   console.log(currentPosition);
-  if (currentPosition > 60) {
-    $("#mobHideMenu").css("background", "black");
+  if (currentPosition > 70) {
+    $("#mobHideMenu, #stickyNavbar").css("background", "black");
   } else {
-    $("#mobHideMenu").css("background", "unset");
+    $("#mobHideMenu, #stickyNavbar").css("background", "unset");
   }
 });
+
+// Scroll for Desktop
+// $(window).scroll(function () {
+//   var currentPosition = window.scrollY;
+//   console.log(currentPosition);
+//   if (currentPosition > 60) {
+//     $("#mobHideMenu").css("background", "black");
+//   } else {
+//     $("#mobHideMenu").css("background", "unset");
+//   }
+// });
