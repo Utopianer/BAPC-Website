@@ -8,6 +8,15 @@ function menuBtnHandleClick() {
   document.getElementById("hideMenuIcon").classList.toggle("is-active");
 }
 
+let bodyWrapper = document.querySelectorAll(".bodyWapper");
+for (let i = 0; i < bodyWrapper.length; i++) {
+  bodyWrapper[i].addEventListener("click", bodyBtnHandleClick);
+}
+function bodyBtnHandleClick() {
+  document.getElementById("mobHideMenu").classList.remove("show");
+  document.getElementById("hideMenuIcon").classList.remove("is-active");
+}
+
 // Scroll for Mobile
 $(window).scroll(function () {
   var currentPosition = window.scrollY;
@@ -18,14 +27,3 @@ $(window).scroll(function () {
     $("#mobHideMenu, #stickyNavbar").css("background", "unset");
   }
 });
-
-// Scroll for Desktop
-// $(window).scroll(function () {
-//   var currentPosition = window.scrollY;
-//   console.log(currentPosition);
-//   if (currentPosition > 60) {
-//     $("#mobHideMenu").css("background", "black");
-//   } else {
-//     $("#mobHideMenu").css("background", "unset");
-//   }
-// });

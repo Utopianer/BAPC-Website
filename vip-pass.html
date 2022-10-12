@@ -128,300 +128,304 @@
     </div>
 
     <!-- Hero Section -->
-    <section class="heroSection">
-      <!-- Navbar -->
-      <nav id="stickyNavbar" class="navbar navbar-expand-sm">
-        <div class="container">
-          <button
-            class="navbar-toggler"
-            type="button"
-            data-bs-toggle="collapse"
-            data-bs-target="#navbarNav"
-            aria-controls="navbarNav"
-            aria-expanded="false"
-            aria-label="Toggle navigation"
-          >
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav brandNav ms-auto">
-              <li class="nav-item firstItem">
-                <a
-                  tkey="free_mint_btn"
-                  class="nav-link"
-                  aria-current="page"
-                  href="free-mint.html"
-                  >Free mint</a
-                >
-              </li>
-              <li class="nav-item logoItem">
-                <a class="nav-link logo" href="index.html">
-                  <img src="./img/logo.png" alt="" />
-                </a>
-              </li>
-              <li class="nav-item secondItem">
-                <a tkey="get_btn" class="nav-link active" href="vip-pass.html"
+    <div class="bodyWapper">
+      <section class="heroSection">
+        <!-- Navbar -->
+        <nav id="stickyNavbar" class="navbar navbar-expand-sm">
+          <div class="container">
+            <button
+              class="navbar-toggler"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#navbarNav"
+              aria-controls="navbarNav"
+              aria-expanded="false"
+              aria-label="Toggle navigation"
+            >
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+              <ul class="navbar-nav brandNav ms-auto">
+                <li class="nav-item firstItem">
+                  <a
+                    tkey="free_mint_btn"
+                    class="nav-link"
+                    aria-current="page"
+                    href="free-mint.html"
+                    >Free mint</a
+                  >
+                </li>
+                <li class="nav-item logoItem">
+                  <a class="nav-link logo" href="index.html">
+                    <img src="./img/logo.png" alt="" />
+                  </a>
+                </li>
+                <li class="nav-item secondItem">
+                  <a tkey="get_btn" class="nav-link active" href="vip-pass.html"
+                    >Get VIP Pass</a
+                  >
+                </li>
+              </ul>
+              <ul class="navbar-nav ms-auto mt-4">
+                <li class="nav-item">
+                  <a class="nav-link" href="#"
+                    ><img src="./img/opensea-icon.png" alt=""
+                  /></a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link px-0" href="#"
+                    ><img src="./img/twitter-icon.png" alt=""
+                  /></a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#"
+                    ><img src="./img/discrod-icon.png" alt=""
+                  /></a>
+                </li>
+                <li class="nav-item dropdown flagDropdown">
+                  <a
+                    class="nav-link dropdown-toggle"
+                    href="#"
+                    id="navbarDropdown"
+                    role="button"
+                    data-bs-toggle="dropdown"
+                    aria-expanded="false"
+                  >
+                    <img id="selectedFlag" src="./img/EN.png" alt="" />
+                  </a>
+                  <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <li>
+                      <a
+                        onClick="setLanguage('ch')"
+                        class="dropdown-item"
+                        href="#"
+                        ><img
+                          class="flagSrc"
+                          tkey="flag"
+                          src="./img/CH.png"
+                          alt=""
+                      /></a>
+                    </li>
+                    <li>
+                      <a
+                        onClick="setLanguage('fr')"
+                        class="dropdown-item"
+                        href="#"
+                        ><img class="flagSrc" src="./img/FR.png" alt=""
+                      /></a>
+                    </li>
+                    <li>
+                      <a
+                        onClick="setLanguage('gr')"
+                        class="dropdown-item"
+                        href="#"
+                        ><img class="flagSrc" src="./img/GR.png" alt=""
+                      /></a>
+                    </li>
+                    <li>
+                      <a
+                        onClick="setLanguage('it')"
+                        class="dropdown-item"
+                        href="#"
+                        ><img class="flagSrc" src="./img/IT.png" alt=""
+                      /></a>
+                    </li>
+                    <li>
+                      <a
+                        onClick="setLanguage('jp')"
+                        class="dropdown-item"
+                        href="#"
+                        ><img class="flagSrc" src="./img/JP.png" alt=""
+                      /></a>
+                    </li>
+                    <li>
+                      <a
+                        onClick="setLanguage('tr')"
+                        class="dropdown-item"
+                        href="#"
+                        ><img class="flagSrc" src="./img/TR.png" alt=""
+                      /></a>
+                    </li>
+                    <li>
+                      <a
+                        onClick="setLanguage('hi')"
+                        class="dropdown-item"
+                        href="#"
+                        ><img class="flagSrc" src="./img/HI.png" alt=""
+                      /></a>
+                    </li>
+                    <li>
+                      <a
+                        onClick="setLanguage('th')"
+                        class="dropdown-item"
+                        href="#"
+                        ><img class="flagSrc" src="./img/TH.png" alt=""
+                      /></a>
+                    </li>
+                    <li>
+                      <a
+                        onClick="setLanguage('en')"
+                        class="dropdown-item"
+                        href="#"
+                        ><img class="flagSrc" src="./img/EN.png" alt=""
+                      /></a>
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </nav>
+
+        <!-- Infinity Section -->
+        <section class="infinitySection">
+          <div class="container">
+            <div class="row">
+              <div class="col-lg-6 mt-4 mt-lg-0">
+                <div class="imgContainer">
+                  <a href="#" class="imageLink">
+                    <img class="pizzaImg" src="./img/pass-img.png" alt="" />
+                  </a>
+                  <div class="socialLinks">
+                    <a href="#">
+                      <img src="./img/link-icon.png" alt="" />
+                    </a>
+                    <a href="#">
+                      <img src="./img/opensea-circle-icon.png" alt="" />
+                    </a>
+                  </div>
+                </div>
+                <a tkey="get_btn" class="mainBtn mobileBtn" href="#"
                   >Get VIP Pass</a
                 >
-              </li>
-            </ul>
-            <ul class="navbar-nav ms-auto mt-4">
-              <li class="nav-item">
-                <a class="nav-link" href="#"
-                  ><img src="./img/opensea-icon.png" alt=""
-                /></a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link px-0" href="#"
-                  ><img src="./img/twitter-icon.png" alt=""
-                /></a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#"
-                  ><img src="./img/discrod-icon.png" alt=""
-                /></a>
-              </li>
-              <li class="nav-item dropdown flagDropdown">
-                <a
-                  class="nav-link dropdown-toggle"
-                  href="#"
-                  id="navbarDropdown"
-                  role="button"
-                  data-bs-toggle="dropdown"
-                  aria-expanded="false"
+              </div>
+              <div class="col-lg-6">
+                <h1 tkey="vip_pass" class="mainHeading">VIP Pass</h1>
+                <p tkey="main_text2" class="mainText">
+                  Become a founding supporter and claim your <br />
+                  spot at the top of the community. <br />
+                  Don't pass up the chance to get a VIP pass early!
+                </p>
+                <a tkey="get_btn" class="mainBtn desktopBtn" href="#"
+                  >Get VIP Pass</a
                 >
-                  <img id="selectedFlag" src="./img/EN.png" alt="" />
-                </a>
-                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                  <li>
-                    <a
-                      onClick="setLanguage('ch')"
-                      class="dropdown-item"
-                      href="#"
-                      ><img
-                        class="flagSrc"
-                        tkey="flag"
-                        src="./img/CH.png"
-                        alt=""
-                    /></a>
-                  </li>
-                  <li>
-                    <a
-                      onClick="setLanguage('fr')"
-                      class="dropdown-item"
-                      href="#"
-                      ><img class="flagSrc" src="./img/FR.png" alt=""
-                    /></a>
-                  </li>
-                  <li>
-                    <a
-                      onClick="setLanguage('gr')"
-                      class="dropdown-item"
-                      href="#"
-                      ><img class="flagSrc" src="./img/GR.png" alt=""
-                    /></a>
-                  </li>
-                  <li>
-                    <a
-                      onClick="setLanguage('it')"
-                      class="dropdown-item"
-                      href="#"
-                      ><img class="flagSrc" src="./img/IT.png" alt=""
-                    /></a>
-                  </li>
-                  <li>
-                    <a
-                      onClick="setLanguage('jp')"
-                      class="dropdown-item"
-                      href="#"
-                      ><img class="flagSrc" src="./img/JP.png" alt=""
-                    /></a>
-                  </li>
-                  <li>
-                    <a
-                      onClick="setLanguage('tr')"
-                      class="dropdown-item"
-                      href="#"
-                      ><img class="flagSrc" src="./img/TR.png" alt=""
-                    /></a>
-                  </li>
-                  <li>
-                    <a
-                      onClick="setLanguage('hi')"
-                      class="dropdown-item"
-                      href="#"
-                      ><img class="flagSrc" src="./img/HI.png" alt=""
-                    /></a>
-                  </li>
-                  <li>
-                    <a
-                      onClick="setLanguage('th')"
-                      class="dropdown-item"
-                      href="#"
-                      ><img class="flagSrc" src="./img/TH.png" alt=""
-                    /></a>
-                  </li>
-                  <li>
-                    <a
-                      onClick="setLanguage('en')"
-                      class="dropdown-item"
-                      href="#"
-                      ><img class="flagSrc" src="./img/EN.png" alt=""
-                    /></a>
-                  </li>
-                </ul>
-              </li>
-            </ul>
+              </div>
+            </div>
           </div>
-        </div>
-      </nav>
+        </section>
+      </section>
 
-      <!-- Infinity Section -->
-      <section class="infinitySection">
+      <!-- Get Section -->
+      <section class="getSection">
         <div class="container">
-          <div class="row">
-            <div class="col-lg-6 mt-4 mt-lg-0">
-              <div class="imgContainer">
-                <a href="#" class="imageLink">
-                  <img class="pizzaImg" src="./img/pass-img.png" alt="" />
-                </a>
-                <div class="socialLinks">
-                  <a href="#">
-                    <img src="./img/link-icon.png" alt="" />
+          <h1 tkey="what_you_get" class="mainHeading">What You get</h1>
+          <img src="./img/down-arrow.png" alt="" />
+          <div class="row mt-5">
+            <div class="col-lg-9 mx-auto">
+              <div class="row">
+                <div class="col-lg-6 col-6 firstCol">
+                  <a href="#" class="getCard">
+                    <h1 tkey="airdrop_pass" class="mainHeading">
+                      Airdrop Pass
+                    </h1>
+                    <img
+                      class="getCardImg"
+                      src="./img/get-card-img-1.png"
+                      alt=""
+                    />
+                    <p tkey="main_text3" class="mainText">
+                      Receive all future Pizza drops <br />
+                      (including 4x Genesis)
+                    </p>
                   </a>
-                  <a href="#">
-                    <img src="./img/opensea-circle-icon.png" alt="" />
+                </div>
+                <div class="col-lg-6 col-6">
+                  <a href="#" class="getCard">
+                    <h1 tkey="pizza_raffles" class="mainHeading">
+                      Pizza Raffles
+                    </h1>
+                    <img
+                      class="getCardImg"
+                      src="./img/get-card-img-2.png"
+                      alt=""
+                    />
+                    <p tkey="main_text4" class="mainText">
+                      Win prizes exclusively for <br />
+                      HOLDERS
+                    </p>
                   </a>
                 </div>
               </div>
-              <a tkey="get_btn" class="mainBtn mobileBtn" href="#"
-                >Get VIP Pass</a
-              >
-            </div>
-            <div class="col-lg-6">
-              <h1 tkey="vip_pass" class="mainHeading">VIP Pass</h1>
-              <p tkey="main_text2" class="mainText">
-                Become a founding supporter and claim your <br />
-                spot at the top of the community. <br />
-                Don't pass up the chance to get a VIP pass early!
-              </p>
-              <a tkey="get_btn" class="mainBtn desktopBtn" href="#"
-                >Get VIP Pass</a
-              >
+              <div class="row mt-1 mt-lg-5">
+                <div class="col-lg-6 col-6 firstCol">
+                  <a href="#" class="getCard">
+                    <h1 tkey="freemint_drink" class="mainHeading">
+                      Freemint Drink
+                      <div>(NFT)</div>
+                    </h1>
+                    <img
+                      class="getCardImg"
+                      src="./img/get-card-img-3.png"
+                      alt=""
+                    />
+                    <p tkey="main_text5" class="mainText">
+                      1x FREE Mint for the upcoming <br />
+                      NFT Collection
+                    </p>
+                  </a>
+                </div>
+                <div class="col-lg-6 col-6">
+                  <a href="#" class="getCard">
+                    <h1 tkey="whitelist_sauce" class="mainHeading">
+                      Whitelist Sauce <span>lvl 3</span>
+                    </h1>
+                    <img
+                      class="getCardImg"
+                      src="./img/get-card-img-4.png"
+                      alt=""
+                    />
+                    <p tkey="main_text6" class="mainText">
+                      1x Additional Whitelist level 3 <br />
+                      to share with a friend
+                    </p>
+                  </a>
+                </div>
+              </div>
+              <div class="row mt-1 mt-lg-5">
+                <div class="col-lg-6 col-6">
+                  <div class="arrowCard">
+                    <img class="lgArrowImg" src="./img/lg-arrow.png" alt="" />
+                  </div>
+                </div>
+                <div class="col-lg-6 col-6">
+                  <a href="#" class="getCard">
+                    <h1 tkey="upcoming" class="mainHeading mb-1">
+                      Upcoming NFT <br />
+                      Collection
+                    </h1>
+                    <img
+                      class="getCardImg d-none d-lg-block"
+                      src="./img/get-card-img-5.png"
+                      alt=""
+                    />
+                    <img
+                      class="getCardImg d-block d-lg-none"
+                      src="./img/get-card-img-6.png"
+                      alt=""
+                    />
+                  </a>
+                </div>
+              </div>
+              <a tkey="get_btn" class="mainBtn" href="#">Get VIP Pass</a>
             </div>
           </div>
         </div>
       </section>
-    </section>
 
-    <!-- Get Section -->
-    <section class="getSection">
-      <div class="container">
-        <h1 tkey="what_you_get" class="mainHeading">What You get</h1>
-        <img src="./img/down-arrow.png" alt="" />
-        <div class="row mt-5">
-          <div class="col-lg-9 mx-auto">
-            <div class="row">
-              <div class="col-lg-6 col-6 firstCol">
-                <a href="#" class="getCard">
-                  <h1 tkey="airdrop_pass" class="mainHeading">Airdrop Pass</h1>
-                  <img
-                    class="getCardImg"
-                    src="./img/get-card-img-1.png"
-                    alt=""
-                  />
-                  <p tkey="main_text3" class="mainText">
-                    Receive all future Pizza drops <br />
-                    (including 4x Genesis)
-                  </p>
-                </a>
-              </div>
-              <div class="col-lg-6 col-6">
-                <a href="#" class="getCard">
-                  <h1 tkey="pizza_raffles" class="mainHeading">
-                    Pizza Raffles
-                  </h1>
-                  <img
-                    class="getCardImg"
-                    src="./img/get-card-img-2.png"
-                    alt=""
-                  />
-                  <p tkey="main_text4" class="mainText">
-                    Win prizes exclusively for <br />
-                    HOLDERS
-                  </p>
-                </a>
-              </div>
-            </div>
-            <div class="row mt-1 mt-lg-5">
-              <div class="col-lg-6 col-6 firstCol">
-                <a href="#" class="getCard">
-                  <h1 tkey="freemint_drink" class="mainHeading">
-                    Freemint Drink
-                    <div>(NFT)</div>
-                  </h1>
-                  <img
-                    class="getCardImg"
-                    src="./img/get-card-img-3.png"
-                    alt=""
-                  />
-                  <p tkey="main_text5" class="mainText">
-                    1x FREE Mint for the upcoming <br />
-                    NFT Collection
-                  </p>
-                </a>
-              </div>
-              <div class="col-lg-6 col-6">
-                <a href="#" class="getCard">
-                  <h1 tkey="whitelist_sauce" class="mainHeading">
-                    Whitelist Sauce <span>lvl 3</span>
-                  </h1>
-                  <img
-                    class="getCardImg"
-                    src="./img/get-card-img-4.png"
-                    alt=""
-                  />
-                  <p tkey="main_text6" class="mainText">
-                    1x Additional Whitelist level 3 <br />
-                    to share with a friend
-                  </p>
-                </a>
-              </div>
-            </div>
-            <div class="row mt-1 mt-lg-5">
-              <div class="col-lg-6 col-6">
-                <div class="arrowCard">
-                  <img class="lgArrowImg" src="./img/lg-arrow.png" alt="" />
-                </div>
-              </div>
-              <div class="col-lg-6 col-6">
-                <a href="#" class="getCard">
-                  <h1 tkey="upcoming" class="mainHeading mb-1">
-                    Upcoming NFT <br />
-                    Collection
-                  </h1>
-                  <img
-                    class="getCardImg d-none d-lg-block"
-                    src="./img/get-card-img-5.png"
-                    alt=""
-                  />
-                  <img
-                    class="getCardImg d-block d-lg-none"
-                    src="./img/get-card-img-6.png"
-                    alt=""
-                  />
-                </a>
-              </div>
-            </div>
-            <a tkey="get_btn" class="mainBtn" href="#">Get VIP Pass</a>
-          </div>
-        </div>
+      <!-- Copy Right Text -->
+      <div class="copyRightText mt-0 pt-5 mt-lg-5" tkey="copy_text">
+        © 2022 Made with ❤ by BAPC
       </div>
-    </section>
-
-    <!-- Copy Right Text -->
-    <div class="copyRightText mt-0 pt-5 mt-lg-5" tkey="copy_text">
-      © 2022 Made with ❤ by BAPC
     </div>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.js"></script>
     <script

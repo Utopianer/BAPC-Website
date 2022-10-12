@@ -110,6 +110,7 @@ body {
 /* Infinity Section */
 .infinitySection {
   padding: 10em 0 4em;
+  position: relative;
 }
 .infinitySection.mintSection {
   padding: 4em 0;
@@ -190,7 +191,7 @@ body {
   top: 0;
   height: 60px;
   width: 100%;
-  transition: 300ms all ease-in-out;
+  transition: 150ms all ease-in-out;
   display: none;
   z-index: 1000;
   padding: 0.8em 1.5em;
@@ -202,7 +203,7 @@ body {
   display: block;
   margin: 4px auto;
   border-radius: 30px;
-  transition: all 0.3s ease-in-out;
+  transition: 400ms all ease-in-out;
 }
 #hideMenuIcon.is-active .line:nth-child(2) {
   opacity: 0;
@@ -230,7 +231,10 @@ body {
   width: 22px;
 }
 .hamburger.is-active {
-  margin-top: -0.8em;
+  margin-top: -0.6em;
+}
+.hamburger {
+  transition: 300ms all ease-in-out;
 }
 .hideMenu .socialIcons a {
   display: inline-block;
@@ -254,10 +258,11 @@ body {
 }
 .hideMenu .hideMenuBody {
   margin: 2em 0;
-  opacity: -1;
+  /* opacity: -1; */
+  display: none;
 }
 .hideMenu.show .hideMenuBody {
-  opacity: 1;
+  display: block;
 }
 .hideMenu .hideMenuBody {
   text-align: center;
@@ -414,7 +419,7 @@ body.infinityPage {
   }
   .infinitySection {
     text-align: center;
-    padding: 9em 0 4em 0;
+    padding: 6em 0 4em 0;
   }
   .infinitySection .row {
     flex-wrap: wrap-reverse;
