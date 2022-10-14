@@ -443,7 +443,7 @@ body.infinityPage {
     display: none;
   }
   .mainBtn.mobileBtn {
-    display: inline-block;
+    display: none;
   }
   .heroSection .navbar {
     display: none;
@@ -501,7 +501,7 @@ body.infinityPage {
     vertical-align: baseline;
   }
   .infinitySection.mintSection {
-    padding: 6em 0;
+    padding: 5em 0;
   }
   .rampp-minting-container {
     margin: auto !important;
