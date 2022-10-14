@@ -235,6 +235,7 @@ body {
 }
 .hamburger {
   transition: 300ms all ease-in-out;
+  margin-top: -0.4em;
 }
 .hideMenu .socialIcons a {
   display: inline-block;
@@ -247,6 +248,25 @@ body {
   display: flex;
   align-items: center;
   justify-content: space-between;
+}
+.rampp-minting-button {
+  display: inline-block;
+  padding: 0.9em 0.5em;
+  text-align: center;
+  font-size: 1.2em;
+  transition: 200ms all ease-in-out;
+  color: black !important;
+  background-color: #f7c36f !important;
+  border-radius: 0.2em;
+  text-decoration: none;
+  margin-top: 1.5em;
+  font-weight: 600;
+  width: 100%;
+  line-height: 0.9;
+  max-width: 200px;
+}
+.rampp-minting-button:hover {
+  background-color: white !important;
 }
 .hideMenu .menuBrand {
   display: inline-block;
@@ -335,12 +355,7 @@ body {
   position: relative;
 }
 .getSection .getCard:hover .getCardImg {
-  transform: scale(0.98);
-}
-.getSection .getCard:hover .mainHeading,
-.getSection .getCard:hover .mainText,
-.getSection .getCard:hover .mainHeading div {
-  color: #f7c36f;
+  transform: scale(1.03);
 }
 .getSection .arrowCard .lgArrowImg {
   position: absolute;
@@ -471,7 +486,7 @@ body.infinityPage {
     margin: 0 0.7em;
   }
   .hideMenu .menuBrand img {
-    height: 45px;
+    height: 42px;
   }
   .getSection .col-lg-6.col-6.firstCol {
     padding-right: 0;
@@ -487,5 +502,8 @@ body.infinityPage {
   }
   .infinitySection.mintSection {
     padding: 6em 0;
+  }
+  .rampp-minting-container {
+    margin: auto !important;
   }
 }
