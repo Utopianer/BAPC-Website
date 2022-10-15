@@ -1,4 +1,4 @@
-var langs = ["en", "ch", "fr", "gr", "it", "jp", "tr", "hi", "th", "nl", "pt"];
+var langs = ["en", "ch", "fr", "gr", "it", "jp", "tr", "hi", "th", "nl", "pt", "es"];
 var langCode = localStorage.getItem("langCode"); //Write the default Value from langs into it
 var langJS = null;
 
