@@ -248,6 +248,8 @@ body {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  position: relative;
+  padding: 0.7em 0;
 }
 .rampp-minting-button {
   display: inline-block;
@@ -271,6 +273,10 @@ body {
 .hideMenu .menuBrand {
   display: inline-block;
   text-decoration: none;
+  position: absolute;
+  left: 53%;
+  top: 0;
+  transform: translateX(-50%);
 }
 .hideMenu .hideMenuHeader .fa-xmark {
   color: white;
@@ -353,9 +359,6 @@ body {
 }
 .getSection .arrowCard {
   position: relative;
-}
-.getSection .getCard:hover .getCardImg {
-  transform: scale(1.03);
 }
 .getSection .arrowCard .lgArrowImg {
   position: absolute;
