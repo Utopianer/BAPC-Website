@@ -54,7 +54,7 @@ body {
   top: 30px;
 }
 .navbar .nav-link.active {
-  border-bottom: 1px solid white;
+  border-bottom: 3px solid white;
 }
 .navbar .nav-link:hover {
   opacity: 0.7;
@@ -218,12 +218,18 @@ body {
   width: 22px;
 }
 .hideMenu.show {
-  height: 300px;
+  height: 250px;
   overflow: unset;
   background-color: black !important;
   margin: 0;
   top: 0;
   border-radius: 0;
+      background: rgb(0 0 0 / 92%)!important;
+    -webkit-backdrop-filter: saturate(300%) blur(15px);
+    backdrop-filter: saturate(300%) blur(15px);
+    -webkit-box-shadow: 0 3px 20px 0px rgb(0 0 0 / 50%);
+    -moz-box-shadow: 0 3px 20px 0px rgba(0, 0, 0, 0.5);
+    box-shadow: 0 3px 20px 0px rgb(0 0 0 / 50%);
 }
 .hideMenu.show #hideMenuIcon.is-active .line:nth-child(1) {
   width: 22px;
@@ -275,7 +281,7 @@ body {
   display: inline-block;
   text-decoration: none;
   position: absolute;
-  left: 51%;
+  left: 53%;
   top: 0;
   transform: translateX(-50%);
 }
@@ -301,10 +307,10 @@ body {
   text-decoration: none;
   margin-bottom: 1.5em;
   transition: 200ms all ease-in-out;
-  padding-bottom: 0.8em;
+  padding-bottom: 0.2em;
 }
 .hideMenu .hideMenuBody .hideMenuLink.active {
-  border-bottom: 1px solid white;
+  border-bottom: 3px solid white;
 }
 .hideMenu .hideMenuBody .hideMenuLink:hover {
   opacity: 0.7;
@@ -405,7 +411,7 @@ body.infinityPage {
   padding: 0;
 }
 .homeSection .multiButton {
-  margin: 10em 0;
+      margin: 10em 0;
 }
 .homeSection .multiButton .mainBtn {
   background-color: #000000;
