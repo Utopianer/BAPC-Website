@@ -51,40 +51,35 @@
 
     <!-- DAPP SCRIPT -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/web3/1.5.2/web3.min.js" integrity="sha512-mYc+D+NmmyR0Gcrzyae7q5HguBCS4cBHAsIk7gGhu0/ZyGg4z2YZDjyR2YQA/IMCMTNs4mnlw3vVdERzewpekQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    
-    <script src="./js/ABI.js"></script>
-    <script  language="JavaScript" type="text/javascript">
-      const finney = 1000000000000000;
+    <script>
+      const infinityABI         = [{"inputs":[{"internalType":"address","name":"_to","type":"address"},{"internalType":"uint256","name":"_id","type":"uint256"}],"name":"mintTo","outputs": [],"stateMutability":"payable","type":"function"}];
 
-      const ABI             = top.CLASS_ABI;
-      const NEWcontract     = '0xC417c9914cc54f88370DA31Bae9376b0632a9724';
+      const infinityPizza     = '0x1db352d01EDe4F0Bbf2EE0349aB62DB86bdF0C20';
 
-      function pageload(){
-        document.getElementById('mintbtn').innerHTML = "<button onclick='mint();'>MINT</button>";
-      }
-
-      async function mint(){
+      async function mintInfinityPizza(){
         try{
-          //let qty = Number(document.getElementById('qty').value);
-          let cost = finney * 200;
-          
           if (window.ethereum) {
             await window.ethereum.enable();
             let web3 = new Web3(window.ethereum);
             let wallet = await web3.eth.getAccounts();
             
-            let txn = new web3.eth.Contract(ABI, NEWcontract);
-            txn.methods.mint( 1 ).send({ from: wallet[0], value: cost });
+            let txn = new web3.eth.Contract(infinityABI, infinityPizza);
+            txn.methods.mintTo( wallet[0], 1 ).send({ from: wallet[0], value: 0 });
           }
         } catch(err) {
           alert("Something went Wrong, Transaction Reverted");
         }
       }
 
+      function pageload(){
+        document.getElementById('mintbtn').innerHTML = "<button onclick='mintInfinityPizza();'>MINT</button>";
+      }
+
       window.addEventListener('DOMContentLoaded', (event) => {
         console.log('DOM fully loaded and parsed');
         pageload();
       });
+        
     </script>
 </body>
 </html>
