@@ -218,7 +218,7 @@
         }
         
         var txn = new web3.eth.Contract(PIZZA_ABI, PIZZA);
-        holdings = txn.methods.balanceOfBatch( walletarray, tokenidarray ).call();
+        holdings = await txn.methods.balanceOfBatch( walletarray, tokenidarray ).call();
         
         console.log(holdings);
       }
