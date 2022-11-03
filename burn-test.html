@@ -209,7 +209,7 @@
         let jlength = LIBRARY.length
         for (i=0; i<jlength; i++){
           // data I might need from the library
-          let tokenId = BigNumber.from(LIBRARY[i]['tokenid']);
+          let tokenId = LIBRARY[i]['tokenid'].toNumber;
           
           console.log(tokenId);
           
