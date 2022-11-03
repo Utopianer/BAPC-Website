@@ -207,18 +207,18 @@
       async function getUserPizzas() {
         holdings = []; //The holdings ID list stays consistent with our pizza library file
         let jlength = LIBRARY.length
+        let walletarray = [];
+        let tokenidarray = [];
+          
         for (i=0; i<jlength; i++){
           
-          let tokenId = LIBRARY[i]['tokenid'];
+          tokenidarray.push(LIBRARY[i]['tokenid']);
+          walletarray.push(wallets[0]);
           
-          console.log(tokenId);
-          
-          var txn = new web3.eth.Contract(PIZZA_ABI, PIZZA);
-    	  let balance = await txn.methods.balanceOf( wallets[0], tokenId ).call();
-    	  
-    	  //Store the value before moving to the next pizza
-    	  holdings.push(balance);
         }
+        
+        var txn = new web3.eth.Contract(PIZZA_ABI, PIZZA);
+        holdings = txn.methods.balanceOfBatch( walletarray, tokenidarray ).call();
         
         console.log(holdings);
       }
