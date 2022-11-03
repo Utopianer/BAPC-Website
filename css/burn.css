@@ -1,0 +1,185 @@
+.bodyWrapper {
+	padding: 0 60px;
+}
+
+header.burn {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding-top: 30px;
+}
+	header.burn div:first-child, header.burn div:nth-child(3) {
+		width: 30%;
+	}
+		header.burn div:nth-child(3) {
+			text-align: right;
+		}
+		header.burn div:nth-child(3) button.btn {
+			margin-left: auto;
+		}
+
+a.backLink {
+	color: #fff;
+	font-size: 16px;
+	font-weight: 700;
+	text-transform: uppercase;
+	text-decoration: none;
+	position: relative;
+	padding-left: 30px;
+}
+	a.backLink:before {
+		content: "";
+		width: 18px;
+		height: 15px;
+		background-image: url('../img/back-arrow.png');
+		background-size: cover;
+		position: absolute;
+		top: 50%;
+		left: 0;
+		transform: translateY(-50%);
+	}
+
+h1.burn {
+	color: #fff;
+	font-size: 40px;
+	font-weight: 700;
+	text-align: center;
+	text-transform: uppercase;
+	margin: 30px 0 20px;
+}
+
+/* BUTTONS */
+button.btn {
+	display: block;
+	width: 180px;
+	height: 48px;
+	line-height: 48px;
+	background-color: #F7C36F;
+	color: #000;
+	font-weight: 700;
+	border: 1px solid #F7C36F;
+	border-radius: 5px;
+	padding: 0 5px;
+	text-align: center;
+	text-transform: uppercase;
+	text-decoration: none;
+	outline: none;
+}
+	button.btn:hover {
+		background-color: #000;
+		color: #F7C36F;
+	}
+
+/* OVEN */
+#ovenContainer {
+	display: flex;
+	max-width: 1400px;
+	margin: 0 auto;
+}
+
+/* HEADINGS */
+h2.burnHeading {
+	color: #fff;
+	font-size: 18px;
+	font-weight: 700;
+	line-height: 27px;
+	border-bottom: 1px solid #F7C36F;
+}
+
+/* INVENTORY */
+#inventory {
+	width: calc(100% / 3);
+}
+	.inventoryContainer	{
+		display: grid;
+		grid-template-columns: repeat(4, minmax(0, 1fr));
+		grid-gap: 10px;
+		max-height: 500px;
+		overflow-y: scroll;
+	}
+		.inventoryItem {
+			background-image: url(../img/infinity.jpg);
+			background-size: cover;
+			aspect-ratio: 1;
+			position: relative;
+		}
+			.inventoryItem:before {
+				content: "";
+				display: block;
+				width: 100%;
+				height: 100%;
+				background-color: rgba(0,0,0,0.9);
+				position: absolute;
+				left: 0;
+				top: 0;
+			}
+
+/* VIDEO */
+#videoWrapper {
+	width: calc(100% / 3);
+	padding: 28px 30px 0;
+}
+	#videoWrapper video {
+		width: 100%;
+		max-height: 100%;
+	}
+	#videoWrapper button.btn {
+		margin: 30px auto 0;
+	}
+
+/* BURN */
+#burn {
+	width: calc(100% / 3);
+}
+	#burn table {
+		width: 100%;
+		border-collapse: separate;
+		border-spacing: 0 5px;
+	}
+		#burn table th, #burn table td {
+			padding: 10px;
+		}
+			#burn table th {
+				color: #fff;
+				font-weight: 700;
+				font-size: 10px;
+			}
+		#burn table tbody tr {
+			background: linear-gradient(180deg, rgba(14, 14, 14, 0.9) 0%, rgba(14, 14, 14, 0.42) 49.27%, rgba(14, 14, 14, 0.9) 100%);
+			margin-top: 5px;
+		}
+			#burn table tbody tr:first-child {
+				margin-top: 0;
+			}
+			#burn table tbody td {
+				font-size: 12px;
+				font-weight: 700;
+				color: #fff;
+			}
+				#burn table tbody td:nth-child(3) {
+					display: flex;
+					flex-direction: column;
+					align-items: center;
+				}
+					span.amount {
+						display: block;
+						padding: 10px 0;
+					}
+					span.add, span.sub {
+						display: flex;
+						justify-content: center;
+						align-items: center;
+						width: 13px;
+						height: 13px;
+						background-color: #4B4B4B;
+						color: #130F26;
+						border-radius: 3px;
+						cursor: pointer;
+					}
+						span.add:hover, span.sub:hover {
+							background-color: #fff;
+						}
+		#burn table img {
+			width: 60px;
+			border: 1px solid #fff;
+		}
