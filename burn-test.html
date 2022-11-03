@@ -35,7 +35,7 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="./css/style.css" />
-    <link rel="stylesheet" href="./css/burn.css?v=1.0.1" />
+    <link rel="stylesheet" href="./css/burn.css?v=1.0.2" />
   </head>
   <body class="burnPage">
     <div class="bodyWrapper">
@@ -216,6 +216,9 @@
                 div = document.createElement('div');
 
             div.classList.add('inventoryItem');
+            // add quantity data attribute
+            div.dataset.quantity = value;
+            // specify image path
             img.src = 'img/pizzas/'+imageName+'.jpg';
 
             div.appendChild(img);
