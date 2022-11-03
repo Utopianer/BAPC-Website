@@ -208,9 +208,8 @@
         holdings = []; //The holdings ID list stays consistent with our pizza library file
         let jlength = LIBRARY.length
         for (i=0; i<jlength; i++){
-          // data I might need from the library
-          let tokenId = "15325094160703702961871960386367558677721013205368135024481889707633472963560";
-          //let tokenId = new BN(LIBRARY[i]['tokenid'], 10);
+          
+          let tokenId = LIBRARY[i]['tokenid'];
           
           console.log(tokenId);
           
