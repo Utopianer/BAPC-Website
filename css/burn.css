@@ -90,7 +90,7 @@ h2.burnHeading {
 #inventory {
 	width: calc(100% / 3);
 }
-	.inventoryContainer	{
+	#inventoryContainer	{
 		display: grid;
 		grid-template-columns: repeat(4, minmax(0, 1fr));
 		grid-gap: 10px;
@@ -103,7 +103,7 @@ h2.burnHeading {
 			aspect-ratio: 1;
 			position: relative;
 		}
-			.inventoryItem:before {
+			.inventoryItem.placeholder:before {
 				content: "";
 				display: block;
 				width: 100%;

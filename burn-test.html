@@ -35,7 +35,7 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="./css/style.css" />
-    <link rel="stylesheet" href="./css/burn.css" />
+    <link rel="stylesheet" href="./css/burn.css?v=1.0.1" />
   </head>
   <body class="burnPage">
     <div class="bodyWrapper">
@@ -48,35 +48,35 @@
       <div id="ovenContainer">
         <div id="inventory">
           <h2 class="burnHeading">Your Inventory</h2>
-          <div class="inventoryContainer">
-            <div class="inventoryItem"></div>
-            <div class="inventoryItem"></div>
-            <div class="inventoryItem"></div>
-            <div class="inventoryItem"></div>
-            <div class="inventoryItem"></div>
-            <div class="inventoryItem"></div>
-            <div class="inventoryItem"></div>
-            <div class="inventoryItem"></div>
-            <div class="inventoryItem"></div>
-            <div class="inventoryItem"></div>
-            <div class="inventoryItem"></div>
-            <div class="inventoryItem"></div>
-            <div class="inventoryItem"></div>
-            <div class="inventoryItem"></div>
-            <div class="inventoryItem"></div>
-            <div class="inventoryItem"></div>
-            <div class="inventoryItem"></div>
-            <div class="inventoryItem"></div>
-            <div class="inventoryItem"></div>
-            <div class="inventoryItem"></div>
-            <div class="inventoryItem"></div>
-            <div class="inventoryItem"></div>
-            <div class="inventoryItem"></div>
-            <div class="inventoryItem"></div>
-            <div class="inventoryItem"></div>
-            <div class="inventoryItem"></div>
-            <div class="inventoryItem"></div>
-            <div class="inventoryItem"></div>
+          <div id="inventoryContainer">
+            <div class="inventoryItem placeholder"></div>
+            <div class="inventoryItem placeholder"></div>
+            <div class="inventoryItem placeholder"></div>
+            <div class="inventoryItem placeholder"></div>
+            <div class="inventoryItem placeholder"></div>
+            <div class="inventoryItem placeholder"></div>
+            <div class="inventoryItem placeholder"></div>
+            <div class="inventoryItem placeholder"></div>
+            <div class="inventoryItem placeholder"></div>
+            <div class="inventoryItem placeholder"></div>
+            <div class="inventoryItem placeholder"></div>
+            <div class="inventoryItem placeholder"></div>
+            <div class="inventoryItem placeholder"></div>
+            <div class="inventoryItem placeholder"></div>
+            <div class="inventoryItem placeholder"></div>
+            <div class="inventoryItem placeholder"></div>
+            <div class="inventoryItem placeholder"></div>
+            <div class="inventoryItem placeholder"></div>
+            <div class="inventoryItem placeholder"></div>
+            <div class="inventoryItem placeholder"></div>
+            <div class="inventoryItem placeholder"></div>
+            <div class="inventoryItem placeholder"></div>
+            <div class="inventoryItem placeholder"></div>
+            <div class="inventoryItem placeholder"></div>
+            <div class="inventoryItem placeholder"></div>
+            <div class="inventoryItem placeholder"></div>
+            <div class="inventoryItem placeholder"></div>
+            <div class="inventoryItem placeholder"></div>
           </div>
         </div>
         <div id="videoWrapper">
@@ -167,21 +167,6 @@
       const LIBRARY = top.pizzalib;
       const FINNEY = 1000000000000000;
       
-      $(function() {
-        $('span.add, span.sub').click(function() {
-          const $this = $(this);
-          let newAmount = 0;
-          let amount = parseInt($(this).siblings('.amount').text());
-          if ($this.hasClass('add')) {
-            newAmount = amount + 1;
-          } else {
-            newAmount = amount - 1;
-          }
-          console.log(newAmount);
-          $(this).siblings('.amount').text(newAmount);
-        });
-      });
-      
       async function connectWallet() {
         // CONNECT TO USER WALLET
     	await window.ethereum.enable();
@@ -220,8 +205,39 @@
         var txn = new web3.eth.Contract(PIZZA_ABI, PIZZA);
         holdings = await txn.methods.balanceOfBatch( walletarray, tokenidarray ).call();
         
-        console.log(holdings);
+        // clear placeholders
+        inventoryContainer.innerHTML = '';
+        for (const [i, value] of holdings.entries()) {
+          // if token is held
+          if (value !== '0') {
+            let tokenName = LIBRARY[i]['name'],
+                imageName = tokenName.replace(/\s+/g, '-').toLowerCase(),
+                img = document.createElement('img'),
+                div = document.createElement('div');
+
+            div.classList.add('inventoryItem');
+            img.src = 'img/pizzas/'+imageName+'.jpg';
+
+            div.appendChild(img);
+
+            inventoryContainer.appendChild(div);
+          }
+        }
       }
+
+      $(function() {
+        $('span.add, span.sub').click(function() {
+          const $this = $(this);
+          let newAmount = 0;
+          let amount = parseInt($(this).siblings('.amount').text());
+          if ($this.hasClass('add')) {
+            newAmount = amount + 1;
+          } else {
+            newAmount = amount - 1;
+          }
+          $(this).siblings('.amount').text(newAmount);
+        });
+      });
       
     </script>
 
