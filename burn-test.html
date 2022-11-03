@@ -209,7 +209,7 @@
         let jlength = LIBRARY.length
         for (i=0; i<jlength; i++){
           // data I might need from the library
-          let tokenId = LIBRARY[i]['tokenid'];
+          let tokenId = BigNumber.from(LIBRARY[i]['tokenid']);
           
           var txn = new web3.eth.Contract(PIZZA_ABI, PIZZA);
     	  let balance = await txn.methods.balanceOf( wallets[0], tokenId ).call();
