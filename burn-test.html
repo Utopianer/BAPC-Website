@@ -212,7 +212,7 @@
           let tokenId = LIBRARY[i]['tokenid'];
           
           var txn = new web3.eth.Contract(PIZZA_ABI, PIZZA);
-    	  let balance = await txn.methods.balanceOf( wallet[0], tokenId ).call();
+    	  let balance = await txn.methods.balanceOf( wallets[0], tokenId ).call();
     	  
     	  //Store the value before moving to the next pizza
     	  holdings.push(balance);
