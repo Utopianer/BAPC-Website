@@ -78,6 +78,13 @@
             <div class="inventoryItem placeholder"></div>
             <div class="inventoryItem placeholder"></div>
           </div>
+          <div id="inventoryTotal">
+            <div>Total Value in XYZ:</div>
+            <div>
+              <img src="img/coin.png" alt="XYZ" />
+              <span id="totalValue"></span>
+            </div>
+          </div>
         </div>
         <div id="videoWrapper">
           <video width="320" height="240" controls>
@@ -100,37 +107,37 @@
             </thead>
             <tbody>
               <tr>
-                <td><img src="img/infinity.jpg" alt="Infinity Pizza"></td>
+                <td><img src="img/pizzas/infinity.jpg" alt="Infinity Pizza"></td>
                 <td>Infinity longer name Pizza</td>
                 <td><span class="add">+</span><span class="amount">4092</span><span class="sub">-</span></td>
                 <td class="value"><span></span>100.1</td>
               </tr>
               <tr>
-                <td><img src="img/infinity.jpg" alt="Infinity Pizza"></td>
+                <td><img src="img/pizzas/infinity.jpg" alt="Infinity Pizza"></td>
                 <td>Infinity longer name Pizza</td>
                 <td><span class="add">+</span><span class="amount">4092</span><span class="sub">-</span></td>
                 <td class="value"><span></span>100.1</td>
               </tr>
               <tr>
-                <td><img src="img/infinity.jpg" alt="Infinity Pizza"></td>
+                <td><img src="img/pizzas/infinity.jpg" alt="Infinity Pizza"></td>
                 <td>Infinity longer name Pizza</td>
                 <td><span class="add">+</span><span class="amount">4092</span><span class="sub">-</span></td>
                 <td class="value"><span></span>100.1</td>
               </tr>
               <tr>
-                <td><img src="img/infinity.jpg" alt="Infinity Pizza"></td>
+                <td><img src="img/pizzas/infinity.jpg" alt="Infinity Pizza"></td>
                 <td>Infinity longer name Pizza</td>
                 <td><span class="add">+</span><span class="amount">4092</span><span class="sub">-</span></td>
                 <td class="value"><span></span>100.1</td>
               </tr>
               <tr>
-                <td><img src="img/infinity.jpg" alt="Infinity Pizza"></td>
+                <td><img src="img/pizzas/infinity.jpg" alt="Infinity Pizza"></td>
                 <td>Infinity longer name Pizza</td>
                 <td><span class="add">+</span><span class="amount">4092</span><span class="sub">-</span></td>
                 <td class="value"><span></span>100.1</td>
               </tr>
               <tr>
-                <td><img src="img/infinity.jpg" alt="Infinity Pizza"></td>
+                <td><img src="img/pizzas/infinity.jpg" alt="Infinity Pizza"></td>
                 <td>Infinity longer name Pizza</td>
                 <td><span class="add">+</span><span class="amount">4092</span><span class="sub">-</span></td>
                 <td class="value"><span></span>100.1</td>
@@ -207,25 +214,35 @@
         
         // clear placeholders
         inventoryContainer.innerHTML = '';
+        // init value
+        let totalValue = 0;
         for (const [i, value] of holdings.entries()) {
           // if token is held
           if (value !== '0') {
             let tokenName = LIBRARY[i]['name'],
                 imageName = tokenName.replace(/\s+/g, '-').toLowerCase(),
+                price = LIBRARY[i]['price'],
                 img = document.createElement('img'),
                 div = document.createElement('div');
 
             div.classList.add('inventoryItem');
-            // add quantity data attribute
+            // add data attributes
             div.dataset.quantity = value;
+            div.dataset.price = price;
             // specify image path
             img.src = 'img/pizzas/'+imageName+'.jpg';
+
+            // increment total value
+            totalValue += (price * value);
 
             div.appendChild(img);
 
             inventoryContainer.appendChild(div);
           }
         }
+        console.log('Total value: ' + totalValue);
+        $totalValue = document.getElementById('totalValue');
+        $totalValue.innerHTML = totalValue.toLocaleString();
       }
 
       $(function() {
