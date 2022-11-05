@@ -35,7 +35,7 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="./css/style.css" />
-    <link rel="stylesheet" href="./css/burn.css?v=1.0.3" />
+    <link rel="stylesheet" href="./css/burn.css?v=1.0.4" />
   </head>
   <body class="burnPage">
     <div class="bodyWrapper">
@@ -88,30 +88,32 @@
         </div>
         <div id="burn">
           <h2 class="burnHeading">Burn</h2>
-          <table>
-            <thead>
-              <tr>
-                <th></th>
-                <th>Name</th>
-                <th>Amount</th>
-                <th>Value</th>
-              </tr>
-            </thead>
-            <tbody>
-              
-            </tbody>
-            <tfoot>
-              <tr>
-                <td colspan="2">You get XYZ:</td>
-                <td colspan="2">+<img src="img/BAPC-coin.svg" alt="BAPC Coin" /><span id="totalBurnValue"></span></td>
-              </tr>
-            </tfoot>
-          </table>
+          <div class="tableWrapper">
+            <div class="tableScroll">
+              <table>
+                <thead>
+                  <tr>
+                    <th></th>
+                    <th>Name</th>
+                    <th>Amount</th>
+                    <th>Value</th>
+                  </tr>
+                </thead>
+                <tbody></tbody>
+              </table>
+            </div>
+          </div>
+          <div class="tableFooter">
+            <div>
+              <div>You get XYZ:</div>
+              <div>+<img src="img/BAPC-coin.svg" alt="BAPC Coin" /><span id="totalBurnValue"></span></div>
+            </div>
+          </tfoot>
         </div>
       </div>
-      <!-- Copy Right Text -->
-      <div class="copyRightText" tkey="copy_text">&copy; 2022 Made with ❤ by BAPC</div>
     </div>
+    <!-- Copy Right Text -->
+    <div class="copyRightText" tkey="copy_text">&copy; 2022 Made with ❤ by BAPC</div>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.js"></script>
     
     <!-- Web3 Injection -->
@@ -177,6 +179,8 @@
         
         // clear placeholders
         inventoryContainer.innerHTML = '';
+        // show inventory total
+        inventoryTotal.style.display = 'flex';
         // init value
         let totalValue = 0;
         for (const [i, quantity] of holdings.entries()) {
@@ -289,10 +293,10 @@
           const rowCount = $('#burn tbody tr').length;
           if (rowCount > 0) {
             $('#burn table thead').show();
-            $('#burn table tfoot').show();
+            $('#burn .tableFooter').show();
           } else {
             $('#burn table thead').removeAttr('style');
-            $('#burn table tfoot').removeAttr('style');
+            $('#burn .tableFooter').removeAttr('style');
           }
 
           $('#burn tbody tr').each(function(i) {

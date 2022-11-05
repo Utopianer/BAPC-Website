@@ -75,6 +75,7 @@ button.btn {
 	display: flex;
 	max-width: 1400px;
 	margin: 0 auto;
+	flex-wrap: wrap;
 }
 
 /* HEADINGS */
@@ -151,12 +152,15 @@ h2.burnHeading {
 		}
 
 	#inventoryTotal {
-		display: flex;
 		align-items: center;
 		justify-content: space-between;
+		font-size: 18px;
 		font-weight: 700;
 		color: #fff;
+		background-color: #0A0A0A;
+		padding: 10px 6px;
 		margin-top: 15px;
+		display: none;
 	}
 		#inventoryTotal div {
 			display: flex;
@@ -183,6 +187,44 @@ h2.burnHeading {
 	#videoWrapper button.btn {
 		margin: 30px auto 0;
 	}
+
+/* TABLE WRAPPER */
+.tableWrapper {
+	position:relative;
+}
+	.tableScroll {
+		height: 500px;
+		overflow-y: scroll;  
+		margin-top: 20px;
+		border-bottom: 1px solid #F7C36F;
+	}
+		.tableScroll:before {
+			display: block;
+			content: "";
+			width: 100%;
+			height: 100%;
+			background-image: url(../img/BAPC-slice.svg);
+			background-repeat: no-repeat;
+			background-size: 300px 361px;
+			background-position: center center;
+			position: absolute;
+			top: 0;
+			left: 0;
+			opacity: .05;
+		}
+		/* scrollbar stuff */
+		.tableScroll::-webkit-scrollbar {
+			width: 16px;
+		}
+		.tableScroll::-webkit-scrollbar-track {
+			background: transparent;
+		}
+		.tableScroll::-webkit-scrollbar-thumb {
+			background-color: #f7c36f;
+			background-clip: padding-box;
+  			border-radius: 9999px;
+			border: 4px solid rgba(0, 0, 0, 0);
+		}
 
 /* BURN */
 #burn {
@@ -212,6 +254,7 @@ h2.burnHeading {
 				padding-top: 0;
 			}
 		#burn table tbody tr {
+			background: rgb(14,14,14);
 			background: linear-gradient(180deg, rgba(14, 14, 14, 0.9) 0%, rgba(14, 14, 14, 0.42) 49.27%, rgba(14, 14, 14, 0.9) 100%);
 			margin-top: 5px;
 		}
@@ -262,18 +305,23 @@ h2.burnHeading {
 				width: 60px;
 				border: 1px solid #fff;
 			}
-		#burn table tfoot {
+	#burn .tableFooter {
+		background-color: #0A0A0A;
+		padding: 10px 6px;
+		margin-top: 15px;
+		display: none;
+	}
+		#burn .tableFooter > div {
+			display: flex;
+			width: 100%;
+			align-items: center;
+			justify-content: space-between;
 			color: #fff;
-			background-color: #0A0A0A;
 			font-size: 18px;
 			font-weight: 700;
-			display: none;
 		}
-			#burn table tfoot td:nth-child(2) {
-				text-align: right;
-			}
-			#burn table tfoot img {
-				display: inline-block;
-				width: 20px;
-				margin:0 5px;
-			}
+		#burn .tableFooter img {
+			display: inline-block;
+			width: 20px;
+			margin:0 5px;
+		}
