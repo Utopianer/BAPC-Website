@@ -242,6 +242,12 @@ h2.burnHeading {
 						color: #130F26;
 						border-radius: 3px;
 						cursor: pointer;
+						-webkit-touch-callout: none;
+						-webkit-user-select: none;
+						-khtml-user-select: none;
+						-moz-user-select: none;
+						-ms-user-select: none;
+						user-select: none;
 					}
 						span.add:hover, span.sub:hover {
 							background-color: #fff;
