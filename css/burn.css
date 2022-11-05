@@ -234,6 +234,8 @@ h2.burnHeading {
 		width: 100%;
 		border-collapse: separate;
 		border-spacing: 0 5px;
+		position: relative;
+		z-index: 10;
 	}
 		#burn table thead {
 			display: none;

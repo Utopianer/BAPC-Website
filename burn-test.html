@@ -35,7 +35,7 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="./css/style.css" />
-    <link rel="stylesheet" href="./css/burn.css?v=1.0.4" />
+    <link rel="stylesheet" href="./css/burn.css?v=1.0.5" />
   </head>
   <body class="burnPage">
     <div class="bodyWrapper">
@@ -278,7 +278,7 @@
           // calculate row total
           totalValue = (amount * value);
           $('.quantity', $tableRow).text(amount);
-          $('.value', $tableRow).text(totalValue);
+          $('.value', $tableRow).text(totalValue.toPrecision(1));
 
           // loop over table rows
           getRows();
