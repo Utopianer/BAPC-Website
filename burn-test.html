@@ -69,14 +69,6 @@
             <div class="inventoryItem placeholder"></div>
             <div class="inventoryItem placeholder"></div>
             <div class="inventoryItem placeholder"></div>
-            <div class="inventoryItem placeholder"></div>
-            <div class="inventoryItem placeholder"></div>
-            <div class="inventoryItem placeholder"></div>
-            <div class="inventoryItem placeholder"></div>
-            <div class="inventoryItem placeholder"></div>
-            <div class="inventoryItem placeholder"></div>
-            <div class="inventoryItem placeholder"></div>
-            <div class="inventoryItem placeholder"></div>
           </div>
           <div id="inventoryTotal">
             <div>Total Value in XYZ:</div>
@@ -108,6 +100,12 @@
             <tbody>
               
             </tbody>
+            <tfoot>
+              <tr>
+                <td colspan="2">You get XYZ:</td>
+                <td colspan="2">+<img src="img/BAPC-coin.svg" alt="BAPC Coin" /><span id="totalBurnValue"></span></td>
+              </tr>
+            </tfoot>
           </table>
         </div>
       </div>
@@ -141,24 +139,24 @@
       
       async function connectWallet() {
         // CONNECT TO USER WALLET
-    	await window.ethereum.enable();
-    	web3 = new Web3(window.ethereum);
-    	wallets = await web3.eth.getAccounts();
-    	
-    	// VERIFY CORRECT CHAIN LOADED IN WALLET OR REQUEST CHANGE NETWORK
-    	let chainId = await web3.eth.getChainId();    
-    	if (chainId != 137){
-    	  await window.ethereum.request({
-    	    method: 'wallet_switchEthereumChain',
-    	    params: [{chainId: '0x89'}],
-    	  });
-    	  window.location.reload();
-    	}
-    	
-    	//PULL PIZZA DATA AND STORE IT LOCALLY
-    	await getUserPizzas();
-    	
-    	// ADD PAGE UPDATE CODE AFTER WALLET CONNECT HERE
+      	await window.ethereum.enable();
+      	web3 = new Web3(window.ethereum);
+      	wallets = await web3.eth.getAccounts();
+      	
+      	// VERIFY CORRECT CHAIN LOADED IN WALLET OR REQUEST CHANGE NETWORK
+      	let chainId = await web3.eth.getChainId();    
+      	if (chainId != 137){
+      	  await window.ethereum.request({
+      	    method: 'wallet_switchEthereumChain',
+      	    params: [{chainId: '0x89'}],
+      	  });
+      	  window.location.reload();
+      	}
+      	
+      	//PULL PIZZA DATA AND STORE IT LOCALLY
+      	await getUserPizzas();
+      	
+      	// ADD PAGE UPDATE CODE AFTER WALLET CONNECT HERE
       }
       
       async function getUserPizzas() {
@@ -243,9 +241,14 @@
             </tr>
           `;
 
+          // add row to table
           $('#burn table tbody').prepend($tableRow);
+
+          // loop over table rows
+          getRows();
         });
 
+        // Increase/decrease quantity
         $(document).on('click', 'span.add:not(.disabled), span.sub', function() {
           const $this = $(this);
           const $tableRow = $this.closest('tr');
@@ -268,10 +271,47 @@
             }
           }
 
+          // calculate row total
           totalValue = (amount * value);
           $('.quantity', $tableRow).text(amount);
           $('.value', $tableRow).text(totalValue);
+
+          // loop over table rows
+          getRows();
         });
+
+        // Loop over table row function
+        function getRows() {
+          let selectedTokenIds = [];
+          let selectedAmounts = [];
+          let totalBurnValue = 0;
+
+          const rowCount = $('#burn tbody tr').length;
+          if (rowCount > 0) {
+            $('#burn table thead').show();
+            $('#burn table tfoot').show();
+          } else {
+            $('#burn table thead').removeAttr('style');
+            $('#burn table tfoot').removeAttr('style');
+          }
+
+          $('#burn tbody tr').each(function(i) {
+            const $tableRow = $(this);
+            const tokenIndex = $tableRow.attr('data-index');
+            const quantity = $('.quantity', $tableRow).text();
+            const value = parseFloat($('.value', $tableRow).text());
+
+            selectedTokenIds.push(tokenIndex);
+            selectedAmounts.push(quantity);
+
+            totalBurnValue += value;
+          });
+
+          $('#totalBurnValue').text(totalBurnValue.toFixed(3));
+
+          console.log(selectedTokenIds);
+          console.log(selectedAmounts);
+        }
       });
       
     </script>
