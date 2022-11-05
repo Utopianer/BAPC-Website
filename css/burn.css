@@ -106,16 +106,34 @@ h2.burnHeading {
 			background-size: cover;
 			aspect-ratio: 1;
 			position: relative;
+			cursor: pointer;
 		}
-			.inventoryItem.placeholder:before {
-				content: "";
+			.inventoryItem.placeholder, .inventoryItem.disabled {
+				cursor: default;
+			}
+				.inventoryItem.disabled {
+					opacity: .1;
+				}
+				.inventoryItem.placeholder:before {
+					content: "";
+					display: block;
+					width: 100%;
+					height: 100%;
+					background-color: rgba(0,0,0,0.9);
+					position: absolute;
+					left: 0;
+					top: 0;
+				}
+			.inventoryItem span.quantity {
 				display: block;
-				width: 100%;
-				height: 100%;
-				background-color: rgba(0,0,0,0.9);
+				background-color: #000;
+				font-size: 8px;
+				font-weight: 700;
+				color: #fff;
 				position: absolute;
-				left: 0;
-				top: 0;
+				bottom: 2px;
+				right: 2px;
+				padding: 1px 5px;
 			}
 
 		/* scrollbar stuff */
@@ -201,7 +219,7 @@ h2.burnHeading {
 					flex-direction: column;
 					align-items: center;
 				}
-					span.amount {
+					span.quantity {
 						display: block;
 						padding: 10px 0;
 					}
@@ -219,6 +237,12 @@ h2.burnHeading {
 						span.add:hover, span.sub:hover {
 							background-color: #fff;
 						}
+						span.add.disabled {
+							cursor: not-allowed;
+						}
+							span.add.disabled:hover {
+								background-color: #4B4B4B;
+							}
 		#burn table img {
 			width: 60px;
 			border: 1px solid #fff;

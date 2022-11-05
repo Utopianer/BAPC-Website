@@ -81,7 +81,7 @@
           <div id="inventoryTotal">
             <div>Total Value in XYZ:</div>
             <div>
-              <img src="img/coin.png" alt="XYZ" />
+              <img src="img/BAPC-coin.svg" alt="BAPC Coin" />
               <span id="totalValue"></span>
             </div>
           </div>
@@ -106,42 +106,7 @@
               </tr>
             </thead>
             <tbody>
-              <tr>
-                <td><img src="img/pizzas/infinity.jpg" alt="Infinity Pizza"></td>
-                <td>Infinity longer name Pizza</td>
-                <td><span class="add">+</span><span class="amount">4092</span><span class="sub">-</span></td>
-                <td class="value"><span></span>100.1</td>
-              </tr>
-              <tr>
-                <td><img src="img/pizzas/infinity.jpg" alt="Infinity Pizza"></td>
-                <td>Infinity longer name Pizza</td>
-                <td><span class="add">+</span><span class="amount">4092</span><span class="sub">-</span></td>
-                <td class="value"><span></span>100.1</td>
-              </tr>
-              <tr>
-                <td><img src="img/pizzas/infinity.jpg" alt="Infinity Pizza"></td>
-                <td>Infinity longer name Pizza</td>
-                <td><span class="add">+</span><span class="amount">4092</span><span class="sub">-</span></td>
-                <td class="value"><span></span>100.1</td>
-              </tr>
-              <tr>
-                <td><img src="img/pizzas/infinity.jpg" alt="Infinity Pizza"></td>
-                <td>Infinity longer name Pizza</td>
-                <td><span class="add">+</span><span class="amount">4092</span><span class="sub">-</span></td>
-                <td class="value"><span></span>100.1</td>
-              </tr>
-              <tr>
-                <td><img src="img/pizzas/infinity.jpg" alt="Infinity Pizza"></td>
-                <td>Infinity longer name Pizza</td>
-                <td><span class="add">+</span><span class="amount">4092</span><span class="sub">-</span></td>
-                <td class="value"><span></span>100.1</td>
-              </tr>
-              <tr>
-                <td><img src="img/pizzas/infinity.jpg" alt="Infinity Pizza"></td>
-                <td>Infinity longer name Pizza</td>
-                <td><span class="add">+</span><span class="amount">4092</span><span class="sub">-</span></td>
-                <td class="value"><span></span>100.1</td>
-              </tr>
+              
             </tbody>
           </table>
         </div>
@@ -216,46 +181,96 @@
         inventoryContainer.innerHTML = '';
         // init value
         let totalValue = 0;
-        for (const [i, value] of holdings.entries()) {
+        for (const [i, quantity] of holdings.entries()) {
           // if token is held
-          if (value !== '0') {
+          if (quantity !== '0') {
             let tokenName = LIBRARY[i]['name'],
                 imageName = tokenName.replace(/\s+/g, '-').toLowerCase(),
-                price = LIBRARY[i]['price'],
+                value = LIBRARY[i]['price'],
                 img = document.createElement('img'),
+                span = document.createElement('span'),
                 div = document.createElement('div');
 
+            // build out inventory item
             div.classList.add('inventoryItem');
             // add data attributes
-            div.dataset.quantity = value;
-            div.dataset.price = price;
+            div.dataset.tokenName = tokenName;
+            div.dataset.imageName = imageName;
+            div.dataset.quantity = quantity;
+            div.dataset.value = value / 1000;
+            div.dataset.index = i;
             // specify image path
             img.src = 'img/pizzas/'+imageName+'.jpg';
 
+            // build out value span
+            span.classList.add('quantity');
+            span.textContent = quantity;
+
             // increment total value
-            totalValue += (price * value) / 1000;
+            totalValue += (value * quantity) / 1000;
 
             div.appendChild(img);
+            div.appendChild(span);
 
             inventoryContainer.appendChild(div);
           }
         }
-        console.log('Total value: ' + totalValue);
+
         $totalValue = document.getElementById('totalValue');
         $totalValue.innerHTML = totalValue.toLocaleString();
       }
 
       $(function() {
-        $('span.add, span.sub').click(function() {
+        // Build out burn table
+        $(document).on('click', '.inventoryItem:not(.placeholder):not(.disabled)', function() {
           const $this = $(this);
-          let newAmount = 0;
-          let amount = parseInt($(this).siblings('.amount').text());
+          $this.addClass('disabled');
+
+          // get token values
+          const name = $this.attr('data-token-name');
+          const image = $this.attr('data-image-name');
+          const quantity = $this.attr('data-quantity');
+          const value = $this.attr('data-value');
+          const index = $this.attr('data-index');
+
+          // build out table row
+          const $tableRow = `
+            <tr data-index="${index}" data-value="${value}" data-quantity="${quantity}">
+              <td><img src="img/pizzas/${image}.jpg" alt="${name}"></td>
+              <td>${name} Pizza</td>
+              <td><span class="add ${quantity == 1 ? 'disabled' : ''}">+</span><span class="quantity">1</span><span class="sub">-</span></td>
+              <td class="value"><span></span>${value}</td>
+            </tr>
+          `;
+
+          $('#burn table tbody').prepend($tableRow);
+        });
+
+        $(document).on('click', 'span.add:not(.disabled), span.sub', function() {
+          const $this = $(this);
+          const $tableRow = $this.closest('tr');
+          const quantity = parseInt($tableRow.attr('data-quantity'));
+          const value = parseFloat($tableRow.attr('data-value'));
+          const index = $tableRow.attr('data-index');
+          let amount = parseInt($('.quantity', $tableRow).text());
+          let totalValue = value;
           if ($this.hasClass('add')) {
-            newAmount = amount + 1;
+            amount++;
+            if (amount === quantity) {
+              $this.addClass('disabled');
+            }
           } else {
-            newAmount = amount - 1;
+            amount--;
+            $('span.add', $tableRow).removeClass('disabled');
+            if (amount === 0) {
+              $tableRow.remove();
+              $('.inventoryItem[data-index="'+index+'"]').removeClass('disabled');
+            }
           }
-          $(this).siblings('.amount').text(newAmount);
+
+          totalValue = (amount * value);
+          $('.quantity', $tableRow).text(amount);
+          $('.value', $tableRow).text(totalValue);
         });
       });
       
