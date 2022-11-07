@@ -85,7 +85,8 @@
             <source src="https://www.w3schools.com/html/mov_bbb.ogg" type="video/ogg">
             Your browser does not support the video tag.
           </video>
-          <button id="burnPizza" class="btn">Burn</a>
+          <div id="burnbutton">
+	      </div>
         </div>
         <div id="burn">
           <h2 class="burnHeading">Burn</h2>
@@ -131,11 +132,13 @@
       var wallets = null;
       var web3 = null;
       var holdings = [];
+      var selectedTokenIds = [];
+      var selectedAmounts = [];
       const PIZZA = '0x2953399124F0cBB46d2CbACD8A89cF0599974963'; //OpenSea ERC1155
       const PIZZA_ABI = top.abi_pizza;
-      const COIN = ''; //Coin address
+      const COIN = '0xb8e57A05579b1F4c42DEc9e18E0b665B0dB5277f'; //Coin address
       const COIN_ABI = top.abi_coin;
-      const OVEN = ''; //Oven address
+      const OVEN = '0x7e410FcF59dd30bC09E9ad21b008D36b907fC86B'; //Oven address
       const OVEN_ABI = top.abi_oven;      
       const LIBRARY = top.pizzalib;
       const FINNEY = 1000000000000000;
@@ -160,6 +163,31 @@
       	await getUserPizzas();
       	
       	// ADD PAGE UPDATE CODE AFTER WALLET CONNECT HERE
+      	await checkApproval();
+      }
+      
+      async function burnPizzas() {
+        let txn = new web3.eth.Contract(OVEN_ABI, OVEN);
+        await txn.methods.burnPizzaBatch( selectedTokenIds, selectedAmounts ).send({ from:wallets[0], amount:0 });      
+      }
+      
+      async function setApproval() {
+        let txn = new web3.eth.Contract(PIZZA_ABI, PIZZA);
+        await txn.methods.setApprovalForAll( OVEN, true ).send({ from:wallets[0], amount:0 });
+        
+        await checkApproval();
+      }
+      
+      async function checkApproval() {
+        let txn = new web3.eth.Contract(PIZZA_ABI, PIZZA);
+        let isApproved = await txn.methods.isApprovedForAll( wallets[0], OVEN ).call();
+        
+        if (isApproved) {
+          document.getElementById().innerHTML = '<button id="burnPizza" class="btn" onClick="burnPizzas();">Burn</a>';
+        } else {
+          document.getElementById().innerHTML = '<button id="burnPizza" class="btn" onClick="setApproval();">Approve Pizzas for Burning</a>';
+        }
+          
       }
       
       async function getUserPizzas() {
@@ -175,7 +203,7 @@
           
         }
         
-        var txn = new web3.eth.Contract(PIZZA_ABI, PIZZA);
+        let txn = new web3.eth.Contract(PIZZA_ABI, PIZZA);
         holdings = await txn.methods.balanceOfBatch( walletarray, tokenidarray ).call();
         
         // clear placeholders
@@ -200,7 +228,7 @@
             div.dataset.tokenName = tokenName;
             div.dataset.imageName = imageName;
             div.dataset.quantity = quantity;
-            div.dataset.value = value / 1000;
+            div.dataset.value = value;
             div.dataset.index = i;
             // specify image path
             img.src = 'img/pizzas/'+imageName+'.jpg';
@@ -210,7 +238,7 @@
             span.textContent = quantity;
 
             // increment total value
-            totalValue += (value * quantity) / 1000;
+            totalValue += (value * quantity);
 
             div.appendChild(img);
             div.appendChild(span);
@@ -319,8 +347,8 @@
 
         // Loop over table row function
         function getRows() {
-          let selectedTokenIds = [];
-          let selectedAmounts = [];
+          selectedTokenIds = [];
+          selectedAmounts = [];
           let totalBurnValue = 0;
 
           const rowCount = $('#burn tbody tr').length;
