@@ -174,8 +174,10 @@
       }
       
       async function setApproval() {
+        let gas = await web3.eth.getGasPrice();
+        
         let txn = new web3.eth.Contract(PIZZA_ABI, PIZZA);
-        await txn.methods.setApprovalForAll( OVEN, true ).send({ from:wallets[0], amount:0 });
+        await txn.methods.setApprovalForAll( OVEN, true ).send({ from:wallets[0], amount:0, priority_fee:gas });
         
         await checkApproval();
       }
