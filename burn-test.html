@@ -370,7 +370,7 @@
             const quantity = $('.quantity', $tableRow).text();
             const value = parseFloat($('.value', $tableRow).text());
 
-            selectedTokenIds.push(tokenIndex);
+            selectedTokenIds.push(LIBRARY[tokenIndex]['tokenid']);
             selectedAmounts.push(quantity);
 
             totalBurnValue += value;
