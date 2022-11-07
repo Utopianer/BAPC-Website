@@ -129,13 +129,13 @@ window.pizzalib = [
 	},
 	{
 		"name": "Genesis 9",
-		"tokenid": "0",
+		"tokenid": "15325094160703702961871960386367558677721013205368135024481889714230542730216",
 		"price": 2500,
 		"image": "https://www.boredpizzas.com/img/pizzas/genesis-9.jpg"
 	},
 	{
 		"name": "Genesis 10",
-		"tokenid": "0",
+		"tokenid": "15325094160703702961871960386367558677721013205368135024481889715330054357992",
 		"price": 2000,
 		"image": "https://www.boredpizzas.com/img/pizzas/genesis-10.jpg"
 	}
