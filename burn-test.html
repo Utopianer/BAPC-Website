@@ -47,6 +47,7 @@
       <h1 class="burn">Burn Oven</h1>
       <div id="ovenContainer">
         <div id="inventory">
+          <div id="inventoryItemHover"></div>
           <h2 class="burnHeading">Your Inventory</h2>
           <div id="inventoryContainer">
             <div class="inventoryItem placeholder"></div>
@@ -223,6 +224,38 @@
       }
 
       $(function() {
+        // Inventory hover
+        $(document).on('mouseenter', '.inventoryItem:not(.placeholder)', function() {
+          const $this = $(this);
+          const name = $this.attr('data-token-name');
+          const image = $this.attr('data-image-name');
+          const quantity = $this.attr('data-quantity');
+          const value = $this.attr('data-value');
+          const index = $this.attr('data-index');
+
+          const $infoWindow = `
+            <div class="pizzaImage"><img src="img/pizzas/${image}.jpg" alt="${name}"></div>
+            <div class="pizzaInfo">
+              <span>${name} Pizza</span>
+              <div>
+                <span>Burn for XYZ tokens</span>
+                <span>+<img src="img/BAPC-coin.svg" alt="BAPC Coin" />${value}</span>
+              </div>
+            </div>
+          `;
+
+          const width = $this.width();
+          const diff = (width - 145) / 2;
+          const left = $this.position().left + (width + 10);
+          const top = $this.position().top + diff;
+          $('#inventoryItemHover').css({top: top,left: left}).show();
+
+          $('#inventoryItemHover').html($infoWindow);
+        });
+        $(document).on('mouseleave', '.inventoryItem:not(.placeholder)', function() {
+          $('#inventoryItemHover').hide();
+        });
+
         // Build out burn table
         $(document).on('click', '.inventoryItem:not(.placeholder):not(.disabled)', function() {
           const $this = $(this);
