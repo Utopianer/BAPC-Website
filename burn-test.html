@@ -183,9 +183,9 @@
         let isApproved = await txn.methods.isApprovedForAll( wallets[0], OVEN ).call();
         
         if (isApproved) {
-          document.getElementById().innerHTML = '<button id="burnPizza" class="btn" onClick="burnPizzas();">Burn</a>';
+          document.getElementById('burnbutton').innerHTML = '<button id="burnPizza" class="btn" onClick="burnPizzas();">Burn</a>';
         } else {
-          document.getElementById().innerHTML = '<button id="burnPizza" class="btn" onClick="setApproval();">Approve Pizzas for Burning</a>';
+          document.getElementById('burnbutton').innerHTML = '<button id="burnPizza" class="btn" onClick="setApproval();">Approve Pizzas for Burning</a>';
         }
           
       }
