@@ -51,7 +51,7 @@ h1.burn {
 /* BUTTONS */
 button.btn {
 	display: block;
-	width: 180px;
+	min-width: 180px;
 	height: 48px;
 	line-height: 48px;
 	background-color: #F7C36F;
@@ -59,7 +59,7 @@ button.btn {
 	font-weight: 700;
 	border: 1px solid #F7C36F;
 	border-radius: 5px;
-	padding: 0 5px;
+	padding: 0 10px;
 	text-align: center;
 	text-transform: uppercase;
 	text-decoration: none;
