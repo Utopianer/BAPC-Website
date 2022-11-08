@@ -168,8 +168,9 @@
       
       async function burnPizzas() {
         let gas = await web3.eth.getGasPrice();
-        console.log('Gas Price showing: ' + gas);
+	
         let txn = new web3.eth.Contract(OVEN_ABI, OVEN);
+	console.log(txn);
         await txn.methods.burnPizzaBatch( selectedTokenIds, selectedAmounts ).send({ from:wallets[0], amount:0, priorityFee:gas});      
       }
       
