@@ -38,6 +38,12 @@
     <link rel="stylesheet" href="./css/burn.css?v=1.0.6" />
   </head>
   <body class="burnPage">
+    <div id="bgVideoWrapper">
+      <video playsinline autoplay muted loop poster="img/bgvid-still.jpg" id="bgVid">
+        <source src="video/bgvid-trans.webm" type="video/webm">
+        <source src="video/bgvid-trans.mp4" type="video/mp4">
+      </video>
+    </div>
     <div class="bodyWrapper">
       <header class="burn">
         <div><a href="/" class="backLink">Back</a></div>
@@ -90,21 +96,143 @@
         </div>
         <div id="burn">
           <h2 class="burnHeading">Burn</h2>
-          <div class="tableWrapper">
-            <div class="tableScroll">
-              <table>
-                <thead>
-                  <tr>
-                    <th></th>
-                    <th>Name</th>
-                    <th>Amount</th>
-                    <th>Value</th>
-                  </tr>
-                </thead>
-                <tbody></tbody>
-              </table>
-            </div>
-          </div>
+          <table>
+            <thead>
+              <tr>
+                <th></th>
+                <th>Name</th>
+                <th>Amount</th>
+                <th>Value</th>
+              </tr>
+            </thead>
+            <tbody>
+              <!-- <tr data-index="2" data-value="900" data-quantity="5">
+                <td><img src="img/pizzas/parcel-party.jpg" alt="Parcel Party"></td>
+                <td>Parcel Party Pizza</td>
+                <td><span class="add ">+</span><span class="quantity">1</span><span class="sub">-</span></td>
+                <td class="value"><span></span>900</td>
+              </tr>
+
+              <tr data-index="1" data-value="900" data-quantity="3">
+                <td><img src="img/pizzas/authentick.jpg" alt="Authentick"></td>
+                <td>Authentick Pizza</td>
+                <td><span class="add ">+</span><span class="quantity">1</span><span class="sub">-</span></td>
+                <td class="value"><span></span>900</td>
+              </tr>
+
+              <tr data-index="4" data-value="900" data-quantity="1">
+                <td><img src="img/pizzas/michi-todd.jpg" alt="Michi Todd"></td>
+                <td>Michi Todd Pizza</td>
+                <td><span class="add disabled">+</span><span class="quantity">1</span><span class="sub">-</span></td>
+                <td class="value"><span></span>900</td>
+              </tr>
+
+              <tr data-index="8" data-value="900" data-quantity="1">
+                <td><img src="img/pizzas/babydolls.jpg" alt="BabyDolls"></td>
+                <td>BabyDolls Pizza</td>
+                <td><span class="add disabled">+</span><span class="quantity">1</span><span class="sub">-</span></td>
+                <td class="value"><span></span>900</td>
+              </tr>
+
+              <tr data-index="12" data-value="700" data-quantity="3">
+                <td><img src="img/pizzas/halloween.jpg" alt="Halloween"></td>
+                <td>Halloween Pizza</td>
+                <td><span class="add ">+</span><span class="quantity">1</span><span class="sub">-</span></td>
+                <td class="value"><span></span>700</td>
+              </tr>
+
+              <tr data-index="16" data-value="12500" data-quantity="1">
+                <td><img src="img/pizzas/genesis-4.jpg" alt="Genesis 4"></td>
+                <td>Genesis 4 Pizza</td>
+                <td><span class="add disabled">+</span><span class="quantity">1</span><span class="sub">-</span></td>
+                <td class="value"><span></span>12500</td>
+              </tr>
+
+              <tr data-index="17" data-value="9500" data-quantity="2">
+                <td><img src="img/pizzas/genesis-5.jpg" alt="Genesis 5"></td>
+                <td>Genesis 5 Pizza</td>
+                <td><span class="add ">+</span><span class="quantity">1</span><span class="sub">-</span></td>
+                <td class="value"><span></span>9500</td>
+              </tr>
+
+              <tr data-index="13" data-value="24500" data-quantity="1">
+                <td><img src="img/pizzas/genesis-1.jpg" alt="Genesis 1"></td>
+                <td>Genesis 1 Pizza</td>
+                <td><span class="add disabled">+</span><span class="quantity">1</span><span class="sub">-</span></td>
+                <td class="value"><span></span>24500</td>
+              </tr>
+
+              <tr data-index="14" data-value="20000" data-quantity="1">
+                <td><img src="img/pizzas/genesis-2.jpg" alt="Genesis 2"></td>
+                <td>Genesis 2 Pizza</td>
+                <td><span class="add disabled">+</span><span class="quantity">1</span><span class="sub">-</span></td>
+                <td class="value"><span></span>20000</td>
+              </tr>
+
+              <tr data-index="15" data-value="16000" data-quantity="1">
+                <td><img src="img/pizzas/genesis-3.jpg" alt="Genesis 3"></td>
+                <td>Genesis 3 Pizza</td>
+                <td><span class="add disabled">+</span><span class="quantity">1</span><span class="sub">-</span></td>
+                <td class="value"><span></span>16000</td>
+              </tr>
+
+              <tr data-index="18" data-value="7000" data-quantity="1">
+                <td><img src="img/pizzas/genesis-6.jpg" alt="Genesis 6"></td>
+                <td>Genesis 6 Pizza</td>
+                <td><span class="add disabled">+</span><span class="quantity">1</span><span class="sub">-</span></td>
+                <td class="value"><span></span>7000</td>
+              </tr>
+
+              <tr data-index="19" data-value="5000" data-quantity="10">
+                <td><img src="img/pizzas/genesis-7.jpg" alt="Genesis 7"></td>
+                <td>Genesis 7 Pizza</td>
+                <td><span class="add ">+</span><span class="quantity">1</span><span class="sub">-</span></td>
+                <td class="value"><span></span>5000</td>
+              </tr>
+
+              <tr data-index="10" data-value="1" data-quantity="5">
+                <td><img src="img/pizzas/infinity.jpg" alt="Infinity"></td>
+                <td>Infinity Pizza</td>
+                <td><span class="add ">+</span><span class="quantity">1</span><span class="sub">-</span></td>
+                <td class="value"><span></span>1</td>
+              </tr>
+
+              <tr data-index="9" data-value="450" data-quantity="1">
+                <td><img src="img/pizzas/wilderness.jpg" alt="Wilderness"></td>
+                <td>Wilderness Pizza</td>
+                <td><span class="add disabled">+</span><span class="quantity">1</span><span class="sub">-</span></td>
+                <td class="value"><span></span>450</td>
+              </tr>
+
+              <tr data-index="5" data-value="900" data-quantity="1">
+                <td><img src="img/pizzas/metadojo.jpg" alt="MetaDojo"></td>
+                <td>MetaDojo Pizza</td>
+                <td><span class="add disabled">+</span><span class="quantity">1</span><span class="sub">-</span></td>
+                <td class="value"><span></span>900</td>
+              </tr>
+
+              <tr data-index="6" data-value="900" data-quantity="1">
+                <td><img src="img/pizzas/hodlhq.jpg" alt="HODLHQ"></td>
+                <td>HODLHQ Pizza</td>
+                <td><span class="add disabled">+</span><span class="quantity">1</span><span class="sub">-</span></td>
+                <td class="value"><span></span>900</td>
+              </tr>
+
+              <tr data-index="7" data-value="180" data-quantity="2">
+                <td><img src="img/pizzas/waifumon.jpg" alt="Waifumon"></td>
+                <td>Waifumon Pizza</td>
+                <td><span class="add ">+</span><span class="quantity">1</span><span class="sub">-</span></td>
+                <td class="value"><span></span>180</td>
+              </tr>
+
+              <tr data-index="3" data-value="150" data-quantity="1">
+                <td><img src="img/pizzas/mutant.jpg" alt="Mutant"></td>
+                <td>Mutant Pizza</td>
+                <td><span class="add disabled">+</span><span class="quantity">1</span><span class="sub">-</span></td>
+                <td class="value"><span></span>150</td>
+              </tr> -->
+            </tbody>
+          </table>
           <div class="tableFooter">
             <div>
               <div>You get XYZ:</div>
