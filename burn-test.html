@@ -171,14 +171,14 @@
 	
         let txn = new web3.eth.Contract(OVEN_ABI, OVEN);
 	console.log(txn);
-        await txn.methods.burnPizzaBatch( selectedTokenIds, selectedAmounts ).send({ from:wallets[0], amount:0, priorityFee:gas});      
+        await txn.methods.burnPizzaBatch( selectedTokenIds, selectedAmounts ).send({ from:wallets[0], amount:0, gasPrice:(gas*3)});      
       }
       
       async function setApproval() {
         let gas = await web3.eth.getGasPrice();
         
         let txn = new web3.eth.Contract(PIZZA_ABI, PIZZA);
-        await txn.methods.setApprovalForAll( OVEN, true ).send({ from:wallets[0], amount:0, priorityFee:gas });
+        await txn.methods.setApprovalForAll( OVEN, true ).send({ from:wallets[0], amount:0, gasPrice:(gas*3) });
         
         await checkApproval();
       }
