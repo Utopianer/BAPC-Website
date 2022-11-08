@@ -344,7 +344,7 @@
           // calculate row total
           totalValue = (amount * value);
           $('.quantity', $tableRow).text(amount);
-          $('.value', $tableRow).text(totalValue.toPrecision(1));
+          $('.value', $tableRow).text(totalValue);
 
           // loop over table rows
           getRows();
@@ -377,7 +377,7 @@
             totalBurnValue += value;
           });
 
-          $('#totalBurnValue').text(totalBurnValue.toFixed(3));
+          $('#totalBurnValue').text(totalBurnValue.toLocaleString());
 
           console.log(selectedTokenIds);
           console.log(selectedAmounts);
