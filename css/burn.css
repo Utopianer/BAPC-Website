@@ -469,7 +469,7 @@ h2.burnHeading {
 				#burn table span.removeRow {
 					font-size: 12px;
 					position: absolute;
-					top: 5px;
+					top: 0;
 					right: 5px;
 					cursor: pointer;
 				}
