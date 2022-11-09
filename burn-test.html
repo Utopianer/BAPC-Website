@@ -35,7 +35,7 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="./css/style.css" />
-    <link rel="stylesheet" href="./css/burn.css?v=1.0.9" />
+    <link rel="stylesheet" href="./css/burn.css?v=1.0.10" />
   </head>
   <body class="burnPage">
     <div id="bgVideoWrapper">
@@ -271,12 +271,15 @@
       const OVEN_ABI = top.abi_oven;      
       const LIBRARY = top.pizzalib;
       const FINNEY = 1000000000000000;
+      const connectBtn = document.getElementById('connectWallet');
       
       async function connectWallet() {
         // CONNECT TO USER WALLET
       	await window.ethereum.enable();
       	web3 = new Web3(window.ethereum);
       	wallets = await web3.eth.getAccounts();
+
+        connectBtn.innerHTML = wallets[0];
       	
       	// VERIFY CORRECT CHAIN LOADED IN WALLET OR REQUEST CHANGE NETWORK
       	let chainId = await web3.eth.getChainId();    
