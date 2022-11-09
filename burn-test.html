@@ -35,7 +35,7 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="./css/style.css" />
-    <link rel="stylesheet" href="./css/burn.css?v=1.0.7" />
+    <link rel="stylesheet" href="./css/burn.css?v=1.0.8" />
   </head>
   <body class="burnPage">
     <div id="bgVideoWrapper">
@@ -48,9 +48,10 @@
       <header class="burn">
         <div><a href="/" class="backLink">Back</a></div>
         <div><img src="./img/logo.png" alt="" /></div>
-        <div><button id="connectWallet" class="btn" onClick="connectWallet();">Connect Wallet</a></div>
+        <div><button id="connectWallet" class="btn" onClick="connectWallet();">Connect <span>Wallet</span></a></div>
       </header>
       <h1 class="burn">Burn Oven</h1>
+      <p id="introText">By clicking approve, you are granting access to <strong>ONLY all of the BAPC NFTs</strong> you currently own on the <strong>BoredPizzas Collection</strong> until you <strong>revoke</strong> this approval. This is necessary for the Burn Oven Contract to transfer your BAPC NFTs from your wallet and swap them into the BAPC Token.</p>
       <div id="ovenContainer">
         <div id="inventory">
           <div id="inventoryItemHover"></div>
@@ -432,10 +433,10 @@
           // build out table row
           const $tableRow = `
             <tr data-index="${index}" data-value="${value}" data-quantity="${quantity}">
-              <td><img src="img/pizzas/${image}.jpg" alt="${name}"></td>
+              <td><img src="img/pizzas/${image}.jpg" alt="${name}"><span class="removeRow">x</span></td>
               <td>${name} Pizza</td>
               <td><span class="add ${quantity == 1 ? 'disabled' : ''}">+</span><span class="quantity">1</span><span class="sub">-</span></td>
-              <td class="value"><span></span>${value}</td>
+              <td class="value"><img src="img/BAPC-coin.svg" alt="BAPC Coin">${value}</td>
             </tr>
           `;
 
@@ -472,10 +473,19 @@
           // calculate row total
           totalValue = (amount * value);
           $('.quantity', $tableRow).text(amount);
-          $('.value', $tableRow).text(totalValue);
+          $('.value span', $tableRow).text(totalValue);
 
           // loop over table rows
           getRows();
+        });
+
+        // Delete row 
+        $(document).on('click', 'span.removeRow', function() {
+          const $this = $(this);
+          const $tableRow = $this.closest('tr');
+          const index = $tableRow.attr('data-index');
+          $tableRow.remove();
+          $('.inventoryItem[data-index="'+index+'"]').removeClass('disabled');
         });
 
         // Loop over table row function
