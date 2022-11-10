@@ -525,6 +525,28 @@
         }
       });
       
+	async function addToWallet(){
+		let tokenAddress = COIN;
+		let tokenSymbol = 'BREAD';
+		let uri = 'https://www.boredpizzas.com/img/logoname.png';
+		if (window.ethereum) {
+			const wasAdded = await ethereum.request({
+				method: 'wallet_watchAsset',
+				params: {
+					type: 'ERC20',
+					options: {
+						address: tokenAddress,
+						symbol: tokenSymbol,
+						decimals: 18,
+						image: uri
+					}
+				}
+			})
+			if (wasAdded) {
+				console.log("$BREAD added to wallet.");
+			}
+		}
+	}
     </script>
 
   </body>
