@@ -79,7 +79,7 @@
             <div class="inventoryItem placeholder"></div>
           </div>
           <div id="inventoryTotal">
-            <div>Total Value in XYZ:</div>
+		  <div>Total Value in <a onclick="addToWallet();">BREAD</a>:</div>
             <div>
               <img src="img/BAPC-coin.svg" alt="BAPC Coin" />
               <span id="totalValue"></span>
@@ -528,7 +528,7 @@
 	async function addToWallet(){
 		let tokenAddress = COIN;
 		let tokenSymbol = 'BREAD';
-		let uri = 'https://www.boredpizzas.com/img/logoname.png';
+		let uri = 'https://www.boredpizzas.com/img/bapc-favicon.png';
 		if (window.ethereum) {
 			const wasAdded = await ethereum.request({
 				method: 'wallet_watchAsset',
