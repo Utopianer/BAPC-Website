@@ -236,7 +236,7 @@
           </table>
           <div class="tableFooter">
             <div>
-              <div>You get XYZ:</div>
+              <div>You get BREAD:</div>
               <div>+<img src="img/BAPC-coin.svg" alt="Bread Coin" /><span id="totalBurnValue"></span></div>
             </div>
           </tfoot>
@@ -528,7 +528,7 @@
 	async function addToWallet(){
 		let tokenAddress = COIN;
 		let tokenSymbol = 'BREAD';
-		let uri = 'https://www.boredpizzas.com/img/bapc-favicon.png';
+		let uri = 'https://www.boredpizzas.com/img/BAPC-coin.svg'; //bapc-favicon.png';
 		if (window.ethereum) {
 			const wasAdded = await ethereum.request({
 				method: 'wallet_watchAsset',
