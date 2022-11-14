@@ -4,11 +4,11 @@
     <meta name="author" content="BoredApePizzaClub" />
     <meta
       name="description"
-      content="Mint your FREE Infinity Pizza here. A Polygon based NFT that gives access to the upcoming private Sale!"
+      content=Burn your Pizza Collectibles to get some Breadcrumb ERC-20 Token."
     />
     <meta
       name="keywords"
-      content="Blockchain, Ethereum, Polygon, nft, bayc, boredpizzas, freenft, freemint, nftcommunity"
+      content="Blockchain, Ethereum, Polygon, nft, bayc, boredpizzas, freenft, freemint, nftcommunity, digital, collectibles"
     />
     <title>BoredPizzas | Burn</title>
     <link
@@ -51,7 +51,7 @@
         <div><button id="connectWallet" class="btn" onClick="connectWallet();">Connect <span>Wallet</span></a></div>
       </header>
       <h1 class="burn">Burn Oven</h1>
-      <p id="introText">By clicking approve, you are granting access to <strong>ONLY all of the BAPC NFTs</strong> you currently own on the <strong>BoredPizzas Collection</strong> until you <strong>revoke</strong> this approval. This is necessary for the Burn Oven Contract to transfer your BAPC NFTs from your wallet and swap them into the BAPC Token.</p>
+      <p id="introText">By clicking approve, you are granting access to <strong>ALL NFTs</strong> you currently own until you <strong>revoke</strong> this approval. This is necessary for the Smart Contract to transfer your Pizzas from your wallet and mint the Tokens.</p>
       <div id="ovenContainer">
         <div id="inventory">
           <div id="inventoryItemHover"></div>
@@ -237,7 +237,7 @@
           <div class="tableFooter">
             <div>
               <div>You get XYZ:</div>
-              <div>+<img src="img/BAPC-coin.svg" alt="BAPC Coin" /><span id="totalBurnValue"></span></div>
+              <div>+<img src="img/BAPC-coin.svg" alt="Bread Coin" /><span id="totalBurnValue"></span></div>
             </div>
           </tfoot>
         </div>
@@ -322,7 +322,7 @@
         if (isApproved) {
           document.getElementById('burnbutton').innerHTML = '<button id="burnPizza" class="btn" onClick="burnPizzas();">Burn</a>';
         } else {
-          document.getElementById('burnbutton').innerHTML = '<button id="burnPizza" class="btn" onClick="setApproval();">Approve Pizzas for Burning</a>';
+          document.getElementById('burnbutton').innerHTML = '<button id="burnPizza" class="btn" onClick="setApproval();">Allow Burning</a>';
         }
           
       }
@@ -404,7 +404,7 @@
               <span>${name} Pizza</span>
               <div>
                 <span>Burn for XYZ tokens</span>
-                <span>+<img src="img/BAPC-coin.svg" alt="BAPC Coin" />${value}</span>
+                <span>+<img src="img/BAPC-coin.svg" alt="Bread Coin" />${value}</span>
               </div>
             </div>
           `;
