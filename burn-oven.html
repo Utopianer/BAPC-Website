@@ -488,6 +488,9 @@
           const index = $tableRow.attr('data-index');
           $tableRow.remove();
           $('.inventoryItem[data-index="'+index+'"]').removeClass('disabled');
+
+          // loop over table rows
+          getRows();
         });
 
         // Loop over table row function
