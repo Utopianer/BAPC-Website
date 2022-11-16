@@ -407,7 +407,7 @@
             const $tableRow = $(this);
             const tokenIndex = $tableRow.attr('data-index');
             const quantity = $('.quantity', $tableRow).text();
-            const value = parseFloat($('.value', $tableRow).text());
+            const value = parseFloat($tableRow.attr('data-value'));
 
             selectedTokenIds.push(LIBRARY[tokenIndex]['tokenid']);
             selectedAmounts.push(quantity);
