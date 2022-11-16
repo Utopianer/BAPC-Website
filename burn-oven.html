@@ -200,9 +200,11 @@
         console.log(txn);
 
         await txn.methods.burnPizzaBatch( selectedTokenIds, selectedAmounts ).send({ from:wallets[0], amount:0, gasPrice:(gas*3)});
-        
-        // empty burn table
+
+        // empty burn table and hide footer
         const tableBody = document.getElementsByTagName('tbody')[0];
+        const tableFooter = document.querySelector('.tableFooter');
+        tableFooter.style.display = 'none';
         tableBody.innerHTML = '';
       }
       
