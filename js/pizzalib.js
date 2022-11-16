@@ -78,7 +78,12 @@ window.pizzalib = [
 		"price": 700,
 		"image": "https://www.boredpizzas.com/img/pizzas/halloween.jpg"
 	},
-
+	{
+		"name": "Festival",
+		"tokenid": "15325094160703702961871960386367558677721013205368135024481889717529077613544",
+		"price": 700,
+		"image": "https://www.boredpizzas.com/img/pizzas/festival.jpg"
+	},
 	{
 		"name": "Genesis 1",
 		"tokenid": "15325094160703702961871960386367558677721013205368135024481889686742752035816",
