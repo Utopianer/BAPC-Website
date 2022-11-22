@@ -15,6 +15,9 @@ Pizza Oven Smart Contract:\
 BREAD Token Smart Contract:[\
 https://polygonscan.com/token/0xb8e57a05579b1f4c42dec9e18e0b665b0db5277f](https://polygonscan.com/token/0xb8e57a05579b1f4c42dec9e18e0b665b0db5277f)
 
+Rewards Distribution:\
+[https://docs.google.com/spreadsheets/d/13qDfvOJnAnJYV0-MVp\_y2ZuIulo9CNXJFviCnbcxNVc/edit?usp=sharing](https://docs.google.com/spreadsheets/d/13qDfvOJnAnJYV0-MVp\_y2ZuIulo9CNXJFviCnbcxNVc/edit?usp=sharing)
+
 ### How to Burn
 
 1. Make sure you are on the Polygon Network on your Metamask wallet
