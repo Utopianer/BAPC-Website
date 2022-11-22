@@ -24,11 +24,12 @@ _(Available in Discord channels #bot-commands or #twitter-rewards only)_
 
 1. Follow [@BoredPizzas](https://twitter.com/BoredPizzas) on Twitter and join our [Discord Server](https://discord.com/invite/GbwykC99N6)
 2. Navigate to the #bot-commands or #twitter-rewards channel in our Discord
-3. Add your discord username (name#1234) to your Twitter profile description (biography) and start the verification process with !twitter \<yourtwitterusername>
+3. Add your discord username (name#1234) to your Twitter profile description (biography) and start the verification process with !twitter \<yourtwitterusername> ![](<.gitbook/assets/image (1).png>)
 4. After confirmation from the Bot, add your ethereum wallet with !wallet \<your0xaddress>
-5. Run the !list command and interact with rewarding tweets to collect points
-6. Post a Tweet or Quote including #boredpizzas and @boredpizzas in the tweet for daily rewards
-7. Climb the leaderboard and proove yourself as the biggest supporter ❤️‍🔥
+5. If you did everything right, you will receive the @verified role
+6. Run the !list command and interact with rewarding tweets to collect points
+7. Post a Tweet or Quote including #boredpizzas and @boredpizzas in the tweet for daily rewards
+8. Climb the leaderboard and proove yourself as the biggest supporter ❤️‍🔥
 
 ### Rewards
 
