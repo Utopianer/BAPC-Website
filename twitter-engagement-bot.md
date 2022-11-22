@@ -4,7 +4,7 @@ description: Made by the BoredPizzas founders
 
 # 🤖 Twitter Engagement Bot
 
-**The Twitter Engagement Bot is a custom Discord Bot made to track engagements with our Twitter account. Collect points, climb the leaderboard to show us your support and win rewards!**
+_The Twitter Engagement Bot is a custom Discord Bot made to track engagements with our Twitter account. Collect points, climb the leaderboard to show us your support and win rewards!_
 
 ## Rules
 
@@ -37,7 +37,5 @@ _(Available in Discord channels #bot-commands or #twitter-rewards only))_
 🗨️Comment = 3 Points\
 Daily Mention (Tweet/Quote) = 2 Points\
 Daily Hashtag (Tweet/Quote) = 3 Points
-
-
 
 (The leaderboard is NOT updated in realtime due to Twitter API limitations. Please ask an admin to update, if your points are not showing in the leaderboard)
