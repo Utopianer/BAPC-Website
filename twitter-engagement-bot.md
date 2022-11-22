@@ -12,7 +12,7 @@ Every Twitter account following @boredpizzas that interact with specific "reward
 
 ### _Available Commands_
 
-_(Available in Discord channels #bot-commands or #twitter-rewards only))_
+_(Available in Discord channels #bot-commands or #twitter-rewards only)_
 
 * !list - Display active Rewarding Tweets
 * !leaderboard - Display TOP Twitter supporters
