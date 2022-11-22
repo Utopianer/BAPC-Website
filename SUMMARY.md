@@ -1,6 +1,6 @@
 # Table of contents
 
-* [👋 Welcome](README.md)
+* [👋 BoredPizzas Documentation](README.md)
 * [🤖 Twitter Engagement Bot](twitter-engagement-bot.md)
 * [🔥 Burn Oven](burn-oven.md)
 * [🍕 Website](https://boredpizzas.com)

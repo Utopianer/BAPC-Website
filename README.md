@@ -1,8 +1,8 @@
 ---
-description: This is the official Wiki from BoredPizzas
+description: This is the official Wiki from the BoredPizzas Project
 ---
 
-# 👋 Welcome
+# 👋 BoredPizzas Documentation
 
 If you have any questions or feedback, please do not hesitate to ask in our [Discord Server](https://discord.com/invite/GbwykC99N6)
 
