@@ -2,6 +2,6 @@
 description: This is the official Wiki from BoredPizzas
 ---
 
-# Welcome
+# 🍕 Welcome
 
-Please do not hesitate to ask any questions
+If you have any questions, please do not hesitate to ask in our [Discord Server](https://discord.com/invite/GbwykC99N6)
