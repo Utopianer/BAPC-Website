@@ -3,19 +3,19 @@ window.pizzalib = [
 	{
 		"name": "Stellar Gate",
 		"tokenid": "15325094160703702961871960386367558677721013205368135024481889710932007850888",
-		"price": 180,
+		"price": 90,
 		"image": "https://www.boredpizzas.com/img/pizzas/stellar-gate.jpg"
 	},
 	{
 		"name": "Authentick",
 		"tokenid": "15325094160703702961871960386367558677721013205368135024481889709832496219112",
-		"price": 900,
+		"price": 450,
 		"image": "https://www.boredpizzas.com/img/pizzas/authentick.jpg"
 	},
 	{
 		"name": "Parcel Party",
 		"tokenid": "15325094160703702961871960386367558677721013205368135024481889707633472963560",
-		"price": 900,
+		"price": 450,
 		"image": "https://www.boredpizzas.com/img/pizzas/parcel-party.jpg"
 	},
 	{
@@ -27,37 +27,37 @@ window.pizzalib = [
 	{
 		"name": "Michi Todd",
 		"tokenid": "15325094160703702961871960386367558677721013205368135024481889693339821802472",
-		"price": 900,
+		"price": 450,
 		"image": "https://www.boredpizzas.com/img/pizzas/michi-todd.jpg"
 	},
 	{
 		"name": "MetaDojo",
 		"tokenid": "15325094160703702961871960386367558677721013205368135024481889692240310174696",
-		"price": 900,
+		"price": 450,
 		"image": "https://www.boredpizzas.com/img/pizzas/metadojo.jpg"
 	},
 	{
 		"name": "HODLHQ",
 		"tokenid": "15325094160703702961871960386367558677721013205368135024481889704334938080232",
-		"price": 900,
+		"price": 450,
 		"image": "https://www.boredpizzas.com/img/pizzas/hodlhq.jpg"
 	},
 	{
 		"name": "Waifumon",
 		"tokenid": "15325094160703702961871960386367558677721013205368135024481889695538845062024",
-		"price": 180,
+		"price": 90,
 		"image": "https://www.boredpizzas.com/img/pizzas/waifumon.jpg"
 	},
 	{
 		"name": "BabyDolls",
 		"tokenid": "15325094160703702961871960386367558677721013205368135024481889703235426452456",
-		"price": 900,
+		"price": 450,
 		"image": "https://www.boredpizzas.com/img/pizzas/babydolls.jpg"
 	},
 	{
 		"name": "Wilderness",
 		"tokenid": "15325094160703702961871960386367558677721013205368135024481889705434449709008",
-		"price": 450,
+		"price": 225,
 		"image": "https://www.boredpizzas.com/img/pizzas/wilderness.jpg"
 	},
 	{
@@ -69,31 +69,31 @@ window.pizzalib = [
 	{
 		"name": "Metatrekkers",
 		"tokenid": "15325094160703702961871960386367558677721013205368135024481889713131031102440",
-		"price": 900,
+		"price": 450,
 		"image": "https://www.boredpizzas.com/img/pizzas/metatrekkers.jpg"
 	},
 	{
 		"name": "Halloween",
 		"tokenid": "15325094160703702961871960386367558677721013205368135024481889712031519474664",
-		"price": 700,
+		"price": 350,
 		"image": "https://www.boredpizzas.com/img/pizzas/halloween.jpg"
 	},
 	{
 		"name": "Festival",
 		"tokenid": "15325094160703702961871960386367558677721013205368135024481889717529077613544",
-		"price": 700,
+		"price": 350,
 		"image": "https://www.boredpizzas.com/img/pizzas/festival.jpg"
 	},
 	{
 		"name": "HirotoKai",
 		"tokenid": "15325094160703702961871960386367558677721013205368135024481889718628589240820",
-		"price": 900,
+		"price": 450,
 		"image": "https://www.boredpizzas.com/img/pizzas/hirotokai.jpg"
 	},
 	{
 		"name": "DaddyChang",
 		"tokenid": "15325094160703702961871960386367558677721013205368135024481889716429565985768",
-		"price": 900,
+		"price": 450,
 		"image": "https://www.boredpizzas.com/img/pizzas/daddychang.jpg"
 	},
 	{
