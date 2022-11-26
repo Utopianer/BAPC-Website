@@ -97,6 +97,12 @@ window.pizzalib = [
 		"image": "https://www.boredpizzas.com/img/pizzas/daddychang.jpg"
 	},
 	{
+		"name": "TheHolyOnes",
+		"tokenid": "15325094160703702961871960386367558677721013205368135024481889719728100869096",
+		"price": 450,
+		"image": "https://www.boredpizzas.com/img/pizzas/theholyones.png"
+	},
+	{
 		"name": "Genesis 1",
 		"tokenid": "15325094160703702961871960386367558677721013205368135024481889686742752035816",
 		"price": 24500,
