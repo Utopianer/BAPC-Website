@@ -100,7 +100,7 @@ window.pizzalib = [
 		"name": "TheHolyOnes",
 		"tokenid": "15325094160703702961871960386367558677721013205368135024481889719728100869096",
 		"price": 450,
-		"image": "https://www.boredpizzas.com/img/pizzas/theholyones.png"
+		"image": "https://www.boredpizzas.com/img/pizzas/theholyones.jpg"
 	},
 	{
 		"name": "Genesis 1",
