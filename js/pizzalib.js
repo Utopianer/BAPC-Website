@@ -102,6 +102,12 @@ window.pizzalib = [
 		"price": 450,
 		"image": "https://www.boredpizzas.com/img/pizzas/theholyones.jpg"
 	},
+		{
+		"name": "OffGridGecko",
+		"tokenid": "15325094160703702961871960386367558677721013205368135024481889720827612496872",
+		"price": 450,
+		"image": "https://www.boredpizzas.com/img/pizzas/offgridgecko.jpg"
+	},
 	{
 		"name": "Genesis 1",
 		"tokenid": "15325094160703702961871960386367558677721013205368135024481889686742752035816",
