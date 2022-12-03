@@ -48,4 +48,4 @@ Daily Hashtag (Tweet/Quote) = 3 Points
 7. Post a Tweet or Quote including #boredpizzas and @boredpizzas in the tweet for daily rewards
 8. Climb the leaderboard and proove yourself as the biggest supporter ❤️‍🔥
 
-(The leaderboard is NOT updated in realtime due to Twitter API limitations. Please ask an admin to update, if your points are not showing in the leaderboard)&#x20;
+(The leaderboard is updated every 30 minutes due to Twitter limitations)&#x20;
