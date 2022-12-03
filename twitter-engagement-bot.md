@@ -22,11 +22,18 @@ _(Available in Discord channels "#bot-commands" or "#twitter-rewards" or direct 
 * !twitter \<twitterusername> - Connect Twitter with Discord account
 * !wallet <0xwalletaddress> - Add your Ethereum wallet for airdrops
 
-### Rewards
+### Rewards from Rewarding List
+
+(Use command !list to see currently active rewarding tweets)
 
 ❤️‍🔥Like = 1 Point\
 🔁Retweet = 2 Points\
-🗨️Comment = 3 Points\
+🗨️Comment = 3 Points
+
+### Daily Rewards
+
+(Post a Tweet or Quote including @boredpizzas and #boredpizzas everyday)
+
 Daily Mention (Tweet/Quote) = 2 Points\
 Daily Hashtag (Tweet/Quote) = 3 Points
 
