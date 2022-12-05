@@ -102,7 +102,7 @@ window.pizzalib = [
 		"price": 450,
 		"image": "https://www.boredpizzas.com/img/pizzas/theholyones.jpg"
 	},
-		{
+	{
 		"name": "OffGridGecko",
 		"tokenid": "15325094160703702961871960386367558677721013205368135024481889720827612496872",
 		"price": 450,
@@ -113,6 +113,12 @@ window.pizzalib = [
 		"tokenid": "15325094160703702961871960386367558677721013205368135024481889686742752035816",
 		"price": 24500,
 		"image": "https://www.boredpizzas.com/img/pizzas/genesis-1.jpg"
+	},
+	{
+		"name": "MeasePhotography",
+		"tokenid": "15325094160703702961871960386367558677721013205368135024481889721927124124648",
+		"price": 450,
+		"image": "https://www.boredpizzas.com/img/pizzas/mease.jpg"
 	},
 	{
 		"name": "Genesis 2",
