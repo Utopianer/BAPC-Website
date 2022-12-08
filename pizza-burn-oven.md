@@ -1,8 +1,10 @@
 ---
-description: Burn your Pizzas to mint BREAD tokens
+description: Burn your Pizzas to mint BREAD tokens!
 ---
 
-# 🔥 Burn Oven
+# 🔥 Pizza Burn Oven
+
+<figure><img src=".gitbook/assets/image (1).png" alt=""><figcaption></figcaption></figure>
 
 ### Important Links
 
@@ -31,3 +33,6 @@ Rewards Distribution:\
    (Burning is irreversible, make sure you only burn the Pizza NFTs you want!)
 8. After confirmation, click the "Add BREAD to Wallet" Button to see your $BREAD tokens in your wallet
 
+### What's next?
+
+Stay tuned as we release opportunities to spend your BREAD Tokens. A BREAD Shop is already in the works and even more is yet to come!

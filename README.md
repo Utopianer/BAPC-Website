@@ -10,6 +10,6 @@ If you have any questions or feedback, please do not hesitate to ask in our [Dis
 [twitter-engagement-bot.md](twitter-engagement-bot.md)
 {% endcontent-ref %}
 
-{% content-ref url="burn-oven.md" %}
-[burn-oven.md](burn-oven.md)
+{% content-ref url="pizza-burn-oven.md" %}
+[pizza-burn-oven.md](pizza-burn-oven.md)
 {% endcontent-ref %}

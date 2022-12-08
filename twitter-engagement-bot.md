@@ -41,7 +41,7 @@ Daily Hashtag (Tweet/Quote) = 3 Points
 
 1. Follow [@BoredPizzas](https://twitter.com/BoredPizzas) on Twitter and join our [Discord Server](https://discord.com/invite/GbwykC99N6)
 2. Navigate to the #bot-commands or #twitter-rewards channel in our Discord
-3. Add your discord username (name#1234) to your Twitter profile description (biography) and start the verification process with !twitter \<yourtwitterusername> ![](<.gitbook/assets/image (1).png>)
+3. Add your discord username (name#1234) to your Twitter profile description (biography) and start the verification process with !twitter \<yourtwitterusername> ![](<.gitbook/assets/image (1) (1).png>)
 4. After confirmation from the Bot, add your ethereum wallet with !wallet \<your0xaddress>
 5. If you did everything right, you will receive the @verified role
 6. Run the !list command and interact with rewarding tweets to collect points
