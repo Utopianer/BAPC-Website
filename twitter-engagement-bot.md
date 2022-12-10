@@ -10,7 +10,7 @@ _The Twitter Engagement Bot is a custom Discord Bot made to track engagements wi
 
 ## Rules
 
-Every Twitter account following @boredpizzas that engage with specific "rewarding" tweets (5 most recent Tweets) will automatically collect points based on their actions (like, retweet, comment). However, in order to be eligible for rewards, a discord and wallet address needs to be connected with your Twitter account.
+Every Twitter account following @boredpizzas that engage with specific "rewarding" tweets (4 most recent Tweets) will automatically collect points based on their actions (like, retweet, comment). However, in order to be eligible for rewards, a discord and wallet address needs to be connected with your Twitter account.
 
 ### _Available Commands_
 
