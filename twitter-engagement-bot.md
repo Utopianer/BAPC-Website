@@ -45,7 +45,7 @@ Daily Hashtag (Tweet/Quote) = 3 Points
 4. After confirmation from the Bot, add your ethereum wallet with !wallet \<your0xaddress>
 5. If you did everything right, you will receive the @verified role
 6. Run the !list command and interact with rewarding tweets to collect points
-7. Post a Tweet or Quote including #boredpizzas and @boredpizzas in the tweet for daily rewards
+7. Post a Tweet or Quote including #RareDough and @RareDough in the tweet for daily rewards
 8. Climb the leaderboard and proove yourself as the biggest supporter ❤️‍🔥
 
 (The leaderboard is updated every 30 minutes due to Twitter limitations)&#x20;
