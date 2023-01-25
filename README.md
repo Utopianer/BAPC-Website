@@ -1,8 +1,8 @@
 ---
-description: This is the official Wiki from the BoredPizzas Project
+description: This is the official Wiki from the RareDough Project
 ---
 
-# 👋 BoredPizzas Documentation
+# 👋 RareDough Documentation
 
 If you have any questions or feedback, please do not hesitate to ask in our [Discord Server](https://discord.com/invite/GbwykC99N6)
 
