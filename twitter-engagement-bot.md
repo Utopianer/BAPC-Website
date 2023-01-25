@@ -6,7 +6,7 @@ description: Made by the RareDough (ex. BoredPizzas) founders
 
 _The Twitter Engagement Bot is a custom Discord Bot made to track engagements with our official Twitter account. Collect points (like, retweet, comment, ...) to climb the leaderboard and win rewards!_
 
-<figure><img src=".gitbook/assets/image (3).png" alt=""><figcaption><p>You can interact with the Tool in specific channels or direct message</p></figcaption></figure>
+<figure><img src=".gitbook/assets/Screenshot 2023-01-25 165334.png" alt=""><figcaption></figcaption></figure>
 
 ## Rules
 
