@@ -9,7 +9,7 @@ description: Burn your Pizzas to mint BREAD tokens!
 ### Important Links
 
 Burn Oven Website: \
-[https://www.boredpizzas.com/burn-oven](https://www.boredpizzas.com/burn-oven)
+[https://www.r](https://www.raredough.com/burn-oven)[aredough.com/burn-oven](https://raredough.com/burn-oven)
 
 Pizza Oven Smart Contract:\
 [https://polygonscan.com/address/0x7e410fcf59dd30bc09e9ad21b008d36b907fc86b](https://polygonscan.com/address/0x7e410fcf59dd30bc09e9ad21b008d36b907fc86b)
@@ -35,4 +35,4 @@ Rewards Distribution:\
 
 ### What's next?
 
-Stay tuned as we release opportunities to spend your BREAD Tokens. A BREAD Shop is already in the works and even more is yet to come!
+Stay tuned as we release opportunities to spend your BREAD Tokens. Visit our [BREAD SHOP](https://raredough.com/shop) to spend your Tokens on innovative crypto products!
