@@ -1,5 +1,6 @@
 ---
 description: Creating a Bitcoin Wallet compatible with Ordinals
+layout: landing
 ---
 
 # 🪙 Receiving Bitcoin Ordinals
